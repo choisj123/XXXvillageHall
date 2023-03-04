@@ -24,7 +24,7 @@
            <!--로고 영역(클릭하면 메인페이지로 넘어감)-->
            <section>
                <a href ="#">
-                   <img src="/src/로고.png" id="home-logo">
+                   <img src="/src/logo.png" id="home-logo">
                </a>
            </section>
 
@@ -41,14 +41,17 @@
            <section class="content-2">
                <!--로그인시 필요한 정보 기입 영역-->
                <form action="#" name="sign-in-form">
-                   <fieldset id="sign-in-area">
+                
+                    <fieldset id="sign-in-area">
 
-                       <section class="sign-in-1">
+                        <section class="sign-in-1">
+
                            <!--아이디-->
                             <fieldset id="id-area">
                                 <i class="fa-regular fa-user"></i>
                                 <input type="text" name="inputId" class="input-text"><br>
                             </fieldset><br>
+
                            <!--비밀번호-->
                          
                             <fieldset id="pw-area">
@@ -61,32 +64,40 @@
                            <button class="signInBtn">로그인</button>
                            </article>
 
-                       </section>                       
+                        </section>     
 
-                   </fieldset>
+                    </fieldset>
 
                    <!--비밀번호 찾기/ 아이디 찾기/ 회원가입 -->
                    <br>
-                   <article class="id-pw-found">
-                    
+                    <article class="id-pw-found">
+
                         <a href="#" class="found">비밀번호찾기</a>
                         <a href="#" class="found">아이디찾기</a>
                         <a href="sign-up-page.html" class="found">회원가입</a>
-                   </article>
-                   
+                    </article> 
+
+                    
+                    <!--카카오로 로그인-->
+               
+                    <article class="sign-in-article-1">
+
+                        <a href="#" class="kakao-signin-a"><div class="kakao-signin"><i class="fa-solid fa-comment" id="text-balloon"></i>카카오 로그인</div></a>
+
+                    </article>
+                    
+            
+                </form>
+
+                        
+
+            </section>
+
+        
 
 
-                     <!--카카오로 로그인-->
-                     <section>
-                       <article class="sign-in-article-1">
-                           <a href="#"><div class="kakao-signin"><i class="fa-solid fa-comment" id="text-balloon"></i>카카오 로그인</div></a>
-                       </article>
 
-                     </section>
-
-               </form>
-
-</body>
+        </body>
        
    </main>
 

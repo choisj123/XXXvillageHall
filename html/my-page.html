@@ -23,10 +23,9 @@
     <main>
       <header>
         <!-- 클릭시 메인으로 이동하는 로고 -->
-        <!-- git test -->
         <section>
           <a href="#">
-            <img src="../src/로고.png" id="home-logo" />
+            <img src="/src/logo.png" id="home-logo" />
           </a>
         </section>
 
@@ -68,11 +67,11 @@
       <section class="body">
         <section class="left-body">
           <article>
-            <!-- 이미지 + 로그인 -->
-
-            <img src="../src/profile.png" /><br />
+            <!-- 프로필 이미지 + 로그인 -->
+            <img src="/src/profile.png" /><br />
             <a href="#" id="body-login"> 로그인</a>
           </article>
+
           <!-- 네비 (메뉴바)-->
           <nav>
             <ul id="main-menu">
@@ -99,7 +98,7 @@
               <li>
                 <i class="fa-solid fa-gear" id="nav-mypage"></i>
                 <a href="#" id="mypage">마이페이지</a>
-                <ul id="sub-menu" style="display: none;">
+                <ul id="sub-menu" style="display: none">
                   <li>
                     <a href="#">내 정보 수정</a>
                   </li>
@@ -115,10 +114,18 @@
         <!-- 메인 콘텐츠 -->
         <section class="right-body">
           <h3>마이페이지</h3>
-          <hr>
-    
-          
+          <div class="myPage-box">
+            <div>내 정보 수정</div>
+            <form action="#" method="post">
+              <div id="box-body">
+                비밀번호 <input type="password" id="myPage-PW" />
+                <button type="submit">확인</button>
+              </div>
+              <div></div>
+            </form>
+          </div>
         </section>
+      </section>
     </main>
 
     <!-- 푸터 -->

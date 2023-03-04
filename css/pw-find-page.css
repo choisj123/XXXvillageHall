@@ -57,15 +57,20 @@ header > section:nth-child(1) {
 
 
 #pw-find-area{
+    
     width: 500px; 
     height: 300px;
     display: flex;
     justify-content: center;
     padding-top: 70px;
+    margin-bottom: 150px;
     border-radius: 20px;
     border: 1px solid gray;
+
     
 }
+
+
 
 /* 아이디 찾기 section*/
 
@@ -73,67 +78,51 @@ header > section:nth-child(1) {
     background-color: rgb(240, 244, 240);
     border: 0;
     outline: 0;
+    width: 250px;
+    
 }
 
 #id-area {
     background-color: rgb(240, 244, 240);
     border: 0;
-    border-radius: 5px;
+    border-radius: 8px;
  
 }
 
 
-/*이메일 입력창*/
+/* 다음 버튼*/
 
-#id-text{
-    width: 190px;
-
-}
-
-.email-btn{
-
-    width: 75px;
-    background-color: #c4e0a4;
-    border: 0;
-    border-radius: 5px;
-    color:darkslategray;
-    cursor: pointer;
-}
-
-/*인증코드 입력창*/
-.code-btn{
-    width: 75px;
-    background-color: #c4e0a4;
-    border: 0;
-    border-radius: 5px;
-    color:darkslategray;
-    cursor: pointer;
-}
-
-/*아이디 찾기 버튼*/
-.id-find-article{
+.pw-find-article{
 
     display: flex;
     justify-content: center;
     padding-top: 50px;
     padding-bottom: 100px;
+    
 }
 
-.id-find-btn{
+.pw-find-btn{
     width: 300px;
     height: 45px;
     font-size: large;
     background-color: #55710f;
     color: white;
     border: 0;
-    border-radius: 8px;
+    border-radius: 10px;
 
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-   
+  
 }
+
+
+#next-a{
+    text-decoration: none;
+}
+
+
 
 
 

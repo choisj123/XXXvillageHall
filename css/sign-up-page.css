@@ -40,9 +40,16 @@ header > section:nth-child(1) {
 
 /**********바디 부분 시작***********/
 
+.content{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
 .content-2{
     display: flex;
     justify-content: center;
+    padding-top: 20px;
 }
 
 #sign-up-area{
@@ -68,6 +75,7 @@ header > section:nth-child(1) {
     color:white;
     border-radius: 5px;
     border: solid #55710F;
+    cursor: pointer;
 }
 
 #nickname-check-btn{
@@ -75,6 +83,7 @@ header > section:nth-child(1) {
     color:white;
     border-radius: 5px;
     border: solid #55710F;
+    cursor: pointer;
 }
 
 #email-check-btn{
@@ -83,6 +92,7 @@ header > section:nth-child(1) {
     border-radius: 5px;
     border: solid #55710F;
     width: 70px;
+    cursor: pointer;
 }
 
 
@@ -105,6 +115,7 @@ header > section:nth-child(1) {
     color: white;
     border-radius: 8px;
     font-size: large;
+    cursor: pointer;
     
 }
 
@@ -113,10 +124,10 @@ header > section:nth-child(1) {
 
     display: flex;
     justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 40px;
-  
-}
+    padding-top: 15px;
+    padding-bottom: 150px;
+
+  }
 
 .sign-up-article-2 a {
     text-decoration: none;

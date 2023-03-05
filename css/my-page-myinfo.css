@@ -190,31 +190,46 @@ nav a {
 }
 
 #box-body {
-  height: 600px;
+  height: 700px;
   flex-basis: 70%;
 
   border: 1px solid black;
   text-align: center;
-  padding-top: 150px;
+  padding-top: 80px;
 }
 
-#box-body > input {
+table {
+  margin-left: auto;
+  margin-right: auto;
+  border-spacing: 15px;
+}
+
+table input {
   border-radius: 5px;
-  height: 23px;
+  height: 25px;
 }
 
-#box-body > button {
-  text-decoration: none;
+table button {
   border: 2px solid #55710f;
   border-radius: 5px;
   background-color: #55710f;
   color: white;
+  padding: 3px 5px 3px 5px;
+}
+
+#updateMyInfo {
+  padding: 5px 40px 5px 40px;
+  border: 2px solid #55710f;
+  border-radius: 5px;
+  background-color: #55710f;
+  color: white;
+  font-size: 15px;
 }
 
 .myPage-box > div:last-child {
   flex-basis: 15%;
 
-  border: 1px solid black;
+  border-top: 1px solid black;
 }
 
 /* 푸터 */

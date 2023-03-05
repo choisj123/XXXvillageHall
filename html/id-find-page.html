@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이디 찾기 페이지</title>
+
+    <link rel="stylesheet" href="/css/id-find-page.css">
+
+    <script
+    src="https://kit.fontawesome.com/2f1bf0eac7.js"
+    crossorigin="anonymous">
+    </script>
+    
+
+</head>
+<body>
+
+    <main>
+        <!--헤더 영역 시작-->
+       <header>
+           <!--로고 영역(클릭하면 메인페이지로 넘어감)-->
+           <section>
+               <a href ="#">
+                   <img src="/src/logo.png" id="home-logo">
+               </a>
+           </section>
+
+       </header>
+       <!--헤더 영역 끝-->
+
+       <!--바디 부분 시작-->
+           <!--콘텐츠 작성 영역-->
+           <section class="content">
+               <h1 class="id-find-text">아이디 찾기</h1>
+           </section>
+
+           <section class="content-2">
+               <!--아이디 찾을 때 필요한 정보 기입 영역-->
+               <form action="#" name="id-find-form">
+                
+                    <fieldset id="id-find-area">
+
+                        <section class="id-find-section">
+
+                           <!--이메일 인증-->
+                            이메일
+                            <fieldset id="email-area">
+                                <input type="email" name="input-email" class="input-text" id= "email-text">
+                                <button class="email-btn">인증 요청</button><br>
+                            </fieldset><br>
+
+                           <!--인증번호 입력창-->
+                           인증번호
+                            <fieldset id="code-area">
+                                <i class="fa-solid fa-key"></i>
+                                <input type="text" name="input-code" class="input-text">
+                                <button class="code-btn">인증</button><br>
+                            </fieldset><br>
+
+                        </section>     
+                        
+
+                    </fieldset>
+
+
+                    <!--아이디 찾기 버튼-->
+                    <article class="id-find-article">
+                        <button class="id-find-btn">아이디 찾기</button>
+                    </article>
+
+                
+                </form>
+
+                        
+            </section>
+
+
+    </main>
+
+    
+   <!-- 푸터 -->
+   <footer>
+    <p>Copyright &copy; 2023. Villege Hall Community. All rights reserved</p>
+  
+    <article>
+        <a href="#">프로젝트 소개</a>
+        <span>|</span>
+        <a href="#">이용약관</a>
+        <span>|</span>
+        <a href="#">개인정보처리방침</a>
+        <span>|</span>
+        <a href="#">고객센터</a>
+        </article>
+</footer>
+ 
+        
+
+
+    
+    
+</body>
+</html>

@@ -104,10 +104,11 @@ header > section:nth-of-type(3) {
 
 .body {
   display: flex;
+  height: 980px;
 }
 
 .left-body {
-  flex-basis: 19%;
+  flex-basis: 215px;
   border-right: 1px solid #55710f;
   flex-direction: column;
 }
@@ -125,11 +126,13 @@ header > section:nth-of-type(3) {
   text-decoration: none;
 }
 
+
 nav > ul {
   display: flex;
   color: #55710f;
   flex-direction: column;
   list-style: none;
+  width: 216px;
 }
 
 nav li:first-of-type {
@@ -154,7 +157,7 @@ nav ul li table td{
 }
 
 .right-body {
-  flex-basis: 71%;
+  flex-basis: 75%;
 }
 
 .hashtag {
@@ -184,7 +187,7 @@ nav ul li table td{
   display: flex;
   color:#55710f;
   padding-top: 50px;
-  padding-left: 80px;
+  margin-left: 200px;
 }
   
 
@@ -193,9 +196,9 @@ nav ul li table td{
   border: 2px solid #55710f;
   border-radius: 20px;
   width: 500px;
-  margin-left: 80px;
+  margin-left: 200px;
   padding: 2px;
-
+  
   display: flex;
 
 }
@@ -229,7 +232,7 @@ nav ul li table td{
 .category-article{
   
   margin-top: 50px;
-  margin-left:70px;
+  margin-left:150px;
   display: flex;
 }
 
@@ -239,6 +242,19 @@ nav ul li table td{
   color:  #55710f;
   font-weight: bold;
   padding: 10px;
+}
+
+.FAQ-container{
+  border: 1px solid black;
+  margin-top: 50px;
+  margin-left: 150px;
+  height: 200%;
+
+}
+
+table {
+  justify-content: center;
+  text-align: center;
 }
 
 

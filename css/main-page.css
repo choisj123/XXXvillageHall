@@ -104,7 +104,7 @@ header > section:nth-of-type(3) {
 }
 
 .left-body {
-  flex-basis: 23.5%;
+  flex-basis: 20%;
   border-right: 1px solid #55710f;
   flex-direction: column;
 }
@@ -151,7 +151,7 @@ nav ul li table td{
 }
 
 .right-body {
-  flex-basis: 100%;
+  flex-basis: 80%;
   border: 1px solid black;
 }
 

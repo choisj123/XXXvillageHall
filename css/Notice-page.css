@@ -162,6 +162,7 @@ nav > ul {
   
   .hashtag {
     display: flex;
+    margin-bottom: 100px;
   }
   
   .hashtag ul {

@@ -11,6 +11,29 @@
       crossorigin="anonymous"
     ></script>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.js" 
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
+    crossorigin="anonymous"></script>
+
+    <style>
+      table{
+          width: 300px;
+          height: 30px; 
+          border-radius: 10px;
+          text-align: center;
+          line-height: 30px;
+          border: 1px solid green;
+          cursor: pointer;
+      }
+
+      p.contents{
+          border: 1px solid lightgray;
+          width: 300px;
+          height: 500px;
+          display: none; /*화면에서 보이지 않음*/
+      }
+  </style>
+
   </head>
   <body>
     <main>
@@ -121,6 +144,7 @@
                     <tr>
                         <td>1231</td>
                         <td><a href="#">개인정보처리방침 개정 내용 사전 안내</a></td>
+                        <p></p>
                         <td>2023.03.04</td>
                         <td>1181</td>
                         <td>18</td>
@@ -128,6 +152,7 @@
                     <tr>
                         <td>993</td>
                         <td><a href="#">위치기반 서비스 개정 내용 사전안내</a></td>
+                        <p></p>
                         <td>2023.02.08</td>
                         <td>111</td>
                         <td>19</td>
@@ -135,6 +160,7 @@
                     <tr>
                         <td>951</td>
                         <td><a href="#">서비스 점검 시간 사전 안내</a></td>
+                        <p></p>
                         <td>2023.01.14</td>
                         <td>141</td>
                         <td>58</td>
@@ -142,6 +168,7 @@
                     <tr>
                         <td>831</td>
                         <td><a href="#">인터넷 익스플로러(IE) 지원 종료 안내</a></td>
+                        <p></p>
                         <td>2023.01.01</td>
                         <td>11</td>
                         <td>11</td>
@@ -149,6 +176,7 @@
                     <tr>
                         <td>777</td>
                         <td><a href="#">저작권 도용 관련 게시글 안내 공지</a></td>
+                        <p></p>
                         <td>2022.11.12</td>
                         <td>181</td>
                         <td>98</td>
@@ -156,6 +184,7 @@
                     <tr>
                         <td>556</td>
                         <td><a href="#">5년 이상 미사용 계정 휴면처리 안내 공지</a></td>
+                        <p></p>
                         <td>2022.08.24</td>
                         <td>111</td>
                         <td>8</td>
@@ -163,6 +192,7 @@
                     <tr>
                         <td>512</td>
                         <td><a href="#">서비스 점검 시간 사전 안내(~12/20)</a></td>
+                        <p></p>
                         <td>2022.06.03</td>
                         <td>121</td>
                         <td>12</td>
@@ -170,6 +200,7 @@
                     <tr>
                         <td>323</td>
                         <td><a href="#">개인정보처리방침 개정 내용 사전 안내(~11/25)</a></td>
+                        <p></p>
                         <td>2022.05.14</td>
                         <td>11</td>
                         <td>1</td>
@@ -177,25 +208,38 @@
                     <tr>
                         <td>123</td>
                         <td><a href="#">위치기반서비스 방침 개정 내용 사전안내(~11/25)</a></td>
+                        <p></p>
                         <td>2022.03.04</td>
                         <td>111</td>
                         <td>8</td>
                     </tr>
                 </tbody>
               </table>
+
+              <script>
+                $(function(){
+                    $("tr").on("click",function(){
+        
+                      console.log($(this).next("p"));
+                        if($(this).next("td").css("display")== 'none'){
+                            $(this).siblings("p.contents").slideUp();
+                            // 다음 요소는 내려라
+                            $(this).next().slideDown();
+        
+                        } else{
+                            $(this).next().slideUp();
+                        }
+        
+                    });
+                });
+            </script>
+
             </div>
 
-            <div id="myComment" class="tabcontent">
-              <h3>내 댓글</h3>
-              <table class="commentTable">
-
-                <tbody>
-                   
-                </tbody>
-              </table>
-            </div>
           </div>   
+
         </section>
+
     </main>
 
     <!-- 푸터 -->
@@ -214,4 +258,5 @@
       </article>
     </footer>
   </body>
+
 </html>

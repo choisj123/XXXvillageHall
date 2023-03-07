@@ -19,10 +19,8 @@
       table{
           width: 300px;
           height: 30px; 
-          border-radius: 10px;
           text-align: center;
           line-height: 30px;
-          border: 1px solid green;
           cursor: pointer;
       }
 
@@ -41,7 +39,7 @@
         <!-- 클릭시 메인으로 이동하는 로고 -->
         <section>
           <a href="#">
-            <img src="../src/로고.png" id="home-logo" />
+            <img src= "../src/logo.png" id="home-logo" />
           </a>
         </section>
 
@@ -220,7 +218,7 @@
                 $(function(){
                     $("tr").on("click",function(){
         
-                      console.log($(this).next("p"));
+                     
                         if($(this).next("td").css("display")== 'none'){
                             $(this).siblings("p.contents").slideUp();
                             // 다음 요소는 내려라

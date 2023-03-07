@@ -8,17 +8,27 @@
     <script defer src="/js/landing.js"></script>
     <title>landing</title>
     <style>
-      div > img {
-        width: 500px;
-        height: 500px;
+      #home-logo {
+        width: 200px;
+        height: 200px;
+        margin: auto;
+      }
+      body {
+        text-align: center;
+        background-image: url("/src/board.png");
+        background-size: 600px;
+        background-repeat: no-repeat;
+        background-position: center bottom;
       }
     </style>
   </head>
   <body>
-    <div class="header"><img src="/src/로고.png" alt="마을회관" /></div>
+    <div class="header">
+      <img src="/src/logo.png" alt="마을회관" id="home-logo" />
+    </div>
     <div>
       <div class="center1">
-        <img class="img1" src="/src/나무게시판.png" alt="나무판자" />
+        <!-- <img class="img1" src="/src/board.png" alt="나무판자" /> -->
         <p class="text">
           우리 마을회관은 여러분이 살고있는<br />
           동네에서 일어나는 소식들을 서로서로<br />

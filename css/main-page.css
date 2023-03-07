@@ -35,7 +35,7 @@ header > section:nth-child(1) {
 
 /* 검색영역 */
 header > section:nth-child(2) {
-  flex-basis: 70%;
+  flex-basis: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,7 +76,7 @@ header > section:nth-child(2) {
 
 /* 로그인 회원가입 영역 */
 header > section:nth-of-type(3) {
-  flex-basis: 15%;
+  flex-basis: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,15 +139,13 @@ nav li {
   padding-top: 8px;
 }
 
-
 nav a {
   color: #55710f;
   text-decoration: none;
 }
 
-nav ul li table td{
+nav ul li table td {
   color: white;
-
 }
 
 .right-body {
@@ -156,90 +154,88 @@ nav ul li table td{
 }
 
 /* ************ 지도 API SECTION 가급적 건들지 말아주세요 ㅠㅠㅠ ************* */
-.container{
+.container {
   width: 400px;
   height: 300px;
 }
 
-.container div{
+.container div {
   border: 1px solid black;
 }
 
- .info{
+.info {
   height: 60px;
 }
 
-.info{
+.info {
   display: flex;
 }
 
-.title{
+.title {
   flex-basis: 94%;
 }
 
-.close{
+.close {
   flex-basis: 6%;
 }
 
-.nav-section{
+.nav-section {
   display: flex;
 }
 
-.left{
+.left {
   flex-basis: 50%;
 }
 
-.right{
+.right {
   text-align: end;
-  flex-basis:50%;
+  flex-basis: 50%;
 }
-.left a:nth-child(1){
+.left a:nth-child(1) {
   font-size: 12px;
 }
-.left a:nth-child(2){
+.left a:nth-child(2) {
   font-size: 12px;
 }
-.left a:nth-child(3){
-  font-size: 12px;
-}
-
-.right > span:first-child{
+.left a:nth-child(3) {
   font-size: 12px;
 }
 
-.right > span:last-child{
+.right > span:first-child {
   font-size: 12px;
 }
 
-.main{
+.right > span:last-child {
+  font-size: 12px;
+}
+
+.main {
   display: flex;
   height: 212px;
 }
 
-.main >div:nth-child(1){
+.main > div:nth-child(1) {
   flex-basis: 15%;
 }
 
-.main >div:nth-child(2){
+.main > div:nth-child(2) {
   flex-basis: 70%;
 }
 
-.main >div:nth-child(3){
+.main > div:nth-child(3) {
   flex-basis: 15%;
 }
 
-.main-content > div:first-child{
+.main-content > div:first-child {
   height: 20%;
   justify-content: left;
- 
 }
 
-.main-content > div:last-child{
+.main-content > div:last-child {
   height: 80%;
-
 }
 
-.main-content > div p:first-child{
+.main-content > div p:first-child {
   margin-top: 6px;
 }
 
@@ -268,44 +264,42 @@ nav ul li table td{
 }
 
 .customoverlay {
-  position:relative;
-  bottom:45px;
-  border-radius:6px;
-  border:1px solid black;
-  border-bottom:none;
-  background:#fff;
-  width:200px;
-  padding:5px;
-
+  position: relative;
+  bottom: 45px;
+  border-radius: 6px;
+  border: 1px solid black;
+  border-bottom: none;
+  background: #fff;
+  width: 200px;
+  padding: 5px;
 }
 .customoverlay:before {
-  content:"";
-  display:block;
-  position:absolute;
-  left:50%;
-  bottom:-9px;
-  width:0;
-  height:0;
-  margin-left:-9px;
-  border-top:10px solid #ccc;
-  border-right:10px solid transparent;
-  border-left:10px solid transparent;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: -9px;
+  width: 0;
+  height: 0;
+  margin-left: -9px;
+  border-top: 10px solid #ccc;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
 }
 
 .customoverlay .overlaybody {
-  padding:10px;
+  padding: 10px;
 }
 .customoverlay .btn-close {
-  position:absolute;
-  top:5px;
-  right:5px;
-  color:#888;
-  font-size:14px;
-  text-decoration:none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #888;
+  font-size: 14px;
+  text-decoration: none;
 }
 
 /* ************여기까지 지도 API SECTION 가급적 건들지 말아주세요 ㅠ퓨ㅠ**************/
-
 
 .hashtag {
   display: flex;
@@ -332,10 +326,10 @@ nav ul li table td{
   height: 40%;
   border: 1px solid rgb(207, 41, 41);
 }
-.date{
+.date {
   height: 10%;
 }
-.notice-fave{
+.notice-fave {
   height: 30%;
   display: flex;
   border: 1px solid black;
@@ -344,29 +338,28 @@ nav ul li table td{
   font-size: 3px;
 }
 
-.weather{
+.weather {
   height: 15%;
   border: 1px solid yellow;
 }
 
-.notice-fave > section{
+.notice-fave > section {
   margin-inline-end: 30px;
   border: solid 1px black;
 }
 
-.notice{
+.notice {
   height: 80%;
 }
 
-.fave{
+.fave {
   height: 80%;
 }
-
 
 footer {
   background-color: #d0d3c6;
   height: 150px;
-  
+
   justify-content: center;
   align-content: center;
   text-align: center;

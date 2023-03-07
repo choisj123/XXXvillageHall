@@ -107,7 +107,7 @@ header > section:nth-of-type(3) {
 }
 
 .left-body {
-  flex-basis: 19%;
+  flex-basis: 20%;
   border-right: 1px solid #55710f;
   flex-direction: column;
 }
@@ -123,6 +123,14 @@ header > section:nth-of-type(3) {
 .left-body a {
   color: #55710f;
   text-decoration: none;
+}
+
+#left-user-name {
+  color: #55710f;
+}
+
+#updateMyInfo, #selectMyBoard {
+  font-size: small;
 }
 
 nav > ul {
@@ -162,7 +170,7 @@ nav a {
 /* 메인 바디 */
 
 .right-body {
-  flex-basis: 71%;
+  flex-basis: 80%;
 
   display: flex;
   flex-direction: column;
@@ -225,8 +233,8 @@ nav a {
   border: 1px solid black;
 }
 
-/* 푸터 */
-======= .hashtag {
+
+.hashtag {
   display: flex;
 }
 
@@ -247,6 +255,7 @@ nav a {
   font-weight: bold;
 }
 
+/* 푸터 */
 footer {
   background-color: #d0d3c6;
   height: 150px;

@@ -53,7 +53,7 @@
           </article>
         </section>
 
-        <!-- 로그인 / 회원가입 -->
+        <!-- 회원이름 / 로그아웃 -->
         <section class="logout-area">
           <span id="user-name">홍길동님</span>&nbsp;&nbsp;
           <div>
@@ -69,10 +69,11 @@
       <section class="body">
         <section class="left-body">
           <article>
-            <!-- 이미지 + 로그인 -->
-
+            <!-- 이미지 + 내정보수정 + 내글댓글좋아요 -->
             <img src="../src/profile.png" /><br />
-            <a href="#" id="body-login"> 로그인</a>
+            <span id="left-user-name"><strong>홍길동님</strong></span>
+            <span><a href="#" id="updateMyInfo">내 정보 수정</a> |
+            <a href="#" id="selectMyBoard"> 내 글 목록</a></span>
           </article>
           <!-- 네비 (메뉴바)-->
           <nav>
@@ -97,18 +98,7 @@
                 <i class="fa-regular fa-circle-question" id="nav-faq"></i>
                 <a href="#">FAQ</a>
               </li>
-              <li>
-                <i class="fa-solid fa-gear" id="nav-mypage"></i>
-                <a href="#" id="mypage">마이페이지</a>
-                <ul id="sub-menu" style="display: none">
-                  <li>
-                    <a href="#">내 정보 수정</a>
-                  </li>
-                  <li>
-                    <a href="#">내 게시글 수정</a>
-                  </li>
-                </ul>
-              </li>
+              
             </ul>
           </nav>
         </section>

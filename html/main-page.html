@@ -5,9 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<<<<<<< HEAD
     <link rel="stylesheet" href="../css/main-page.css" />
-<<<<<<< HEAD
+
+    <script>
+      type = "text/javascript";
+      src =
+        "//dapi.kakao.com/v2/maps/sdk.js?appkey=af34b09f8f2cdee07cf990ab549e6220";
+    </script>
+    <script>
+      type = "text/javascript";
+      src =
+        "//dapi.kakao.com/v2/maps/sdk.js?appkey=af34b09f8f2cdee07cf990ab549e6220&libraries=LIBRARY";
+    </script>
+
+    <link rel="stylesheet" href="../css/main-page.css" />
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	196b8c346b121bd08b2a475bfa001dd0"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	196b8c346b121bd08b2a475bfa001dd0&libraries=LIBRARY"
+    ></script>
+
+    <script>
+      src = "https://kit.fontawesome.com/2f1bf0eac7.js";
+      crossorigin = "anonymous";
+    </script>
+
     <script
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=af34b09f8f2cdee07cf990ab549e6220"
@@ -16,28 +41,18 @@
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=af34b09f8f2cdee07cf990ab549e6220&libraries=LIBRARY"
     ></script>
-=======
-    <link rel="stylesheet"  href="../css/main-page.css" />
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	196b8c346b121bd08b2a475bfa001dd0"></script>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	196b8c346b121bd08b2a475bfa001dd0&libraries=LIBRARY"></script>
->>>>>>> 4954f90a0f3f50817ebb4fae88fd73075db4ab20
     <script
       src="https://kit.fontawesome.com/2f1bf0eac7.js"
       crossorigin="anonymous"
     ></script>
-=======
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=af34b09f8f2cdee07cf990ab549e6220"></script>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=af34b09f8f2cdee07cf990ab549e6220&libraries=LIBRARY"></script>
-    <script src="https://kit.fontawesome.com/2f1bf0eac7.js" crossorigin="anonymous"></script>
->>>>>>> f2a3c72cc1428516dd08af7841d0c4a53e2bb2ed
   </head>
   <body>
     <main>
       <header>
         <!-- 클릭시 메인으로 이동하는 로고 -->
         <section>
-          <a href="#">
-            <img src="../src/로고.png" id="home-logo" />
+          <a href="/html/main-page.html">
+            <img src="/src/logo.png" id="home-logo" />
           </a>
         </section>
 
@@ -68,10 +83,15 @@
         <section class="login-signup-area">
           <div>
             <!-- 자물쇠 아이콘 -->
-            <a href="#" id="login" class="fa-solid fa-lock">&nbsp;로그인</a>
+            <a
+              href="/html/sign-in-page.html"
+              id="login"
+              class="fa-solid fa-lock"
+              >&nbsp;로그인</a
+            >
           </div>
 
-          <a href="#" id="signup">회원가입</a>
+          <a href="/html/sign-up-page.html" id="signup">회원가입</a>
         </section>
       </header>
 
@@ -82,14 +102,14 @@
             <!-- 이미지 + 로그인 -->
 
             <img src="../src/profile.png" /><br />
-            <a href="#" id="body-login"> 로그인</a>
+            <a href="/html/sign-in-page.html" id="body-login"> 로그인</a>
           </article>
           <!-- 네비 (메뉴바)-->
           <nav>
             <ul>
               <li>
                 <i class="fa-solid fa-house" id="nav-home"></i>
-                <a href="#">홈</a>
+                <a href="/html/main-page.html">홈</a>
               </li>
               <li>
                 <i class="fa-regular fa-bell" id="nav-notice"></i>
@@ -97,7 +117,7 @@
               </li>
               <li>
                 <i class="fa-solid fa-globe" id="nav-all"></i>
-                <a href="#">전체글</a>
+                <a href="/html/All-board.html">전체글</a>
               </li>
               <li>
                 <i class="fa-solid fa-bookmark" id="nav-popular"></i>
@@ -105,7 +125,7 @@
               </li>
               <li>
                 <i class="fa-regular fa-circle-question" id="nav-faq"></i>
-                <a href="#">FAQ</a>
+                <a href="/html/FAQ-page.html">FAQ</a>
               </li>
             </ul>
           </nav>
@@ -127,7 +147,7 @@
           <!-- 지도 부분 -->
 
           <section>
-            <div id="map" style="width: 1000px; height: 400px"></div>
+            <div id="map" style="width: 921 px; height: 500px"></div>
             <script>
               // 호옥시 궁금해하실까봐 좀 끄적여봤습니다 api가 응용방법이 너무많아서 그중에 하나라고 생각하시면되용
               //  다중 마커 생성을 위한 데이터입니다
@@ -163,12 +183,12 @@
                   content:
                     '<div class="customoverlay">' +
                     "<h3>" +
-                    position.title +
+                    "position.title" +
                     "</h3>" +
                     '<div class="body">' +
                     '<div class="desc">' +
                     "<p>" +
-                    position.content +
+                    " position.content" +
                     "</p>" +
                     "</div>" +
                     "</div>" +
@@ -204,7 +224,6 @@
             </script>
           </section>
 
-
           <!-- 날짜 -->
           <section class="date"></section>
 
@@ -212,7 +231,7 @@
           <section class="notice-fave">
             <!-- 공지사항 -->
             <section class="notice">
-              <table border="1">
+              <table style="border: 1px">
                 <h3>공지사항</h3>
                 <tr>
                   <th>제목(댓글수)</th>
@@ -222,93 +241,139 @@
                 </tr>
 
                 <tr>
-                  <td><a href="#" title="사용꿀팁"> 개인정보처리방침 개정 사전안내 </a></td>
+                  <td>
+                    <a href="#" title="사용꿀팁">
+                      개인정보처리방침 개정 사전안내
+                    </a>
+                  </td>
                   <td><a href="#" title="사용꿀팁"> 운영자 </a></td>
                   <td><a href="#" title="사용꿀팁"> 2022-12-31 </a></td>
                   <td><a href="#" title="사용꿀팁"> 66 </a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="#" title="사용꿀팁"> 개인정보처리방침 개정 사전안내 </a></td>
+                  <td>
+                    <a href="#" title="사용꿀팁">
+                      개인정보처리방침 개정 사전안내
+                    </a>
+                  </td>
                   <td><a href="#" title="사용꿀팁"> 운영자 </a></td>
                   <td><a href="#" title="사용꿀팁"> 2022-05-03 </a></td>
                   <td><a href="#" title="사용꿀팁"> 66 </a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="#" title="사용꿀팁"> 위치기반서비스방침 개정 내용 사전안내 </a></td>
+                  <td>
+                    <a href="#" title="사용꿀팁">
+                      위치기반서비스방침 개정 내용 사전안내
+                    </a>
+                  </td>
                   <td><a href="#" title="사용꿀팁"> 운영자 </a></td>
                   <td><a href="#" title="사용꿀팁"> 2022-01-29 </a></td>
                   <td><a href="#" title="사용꿀팁"> 53 </a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="#" title="사용꿀팁"> 서비스 점검 시간 사전 안내 </a></td>
+                  <td>
+                    <a href="#" title="사용꿀팁">
+                      서비스 점검 시간 사전 안내
+                    </a>
+                  </td>
                   <td><a href="#" title="사용꿀팁"> 운영자 </a></td>
                   <td><a href="#" title="사용꿀팁"> 2021-11-28 </a></td>
                   <td><a href="#" title="사용꿀팁"> 39 </a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="#" title="사용꿀팁"> 인터넷 익스플로러(IE) 지원 종료 안내 </a></td>
+                  <td>
+                    <a href="#" title="사용꿀팁">
+                      인터넷 익스플로러(IE) 지원 종료 안내
+                    </a>
+                  </td>
                   <td><a href="#" title="사용꿀팁"> 운영자 </a></td>
                   <td><a href="#" title="사용꿀팁"> 2021-11-05 </a></td>
                   <td><a href="#" title="사용꿀팁"> 27 </a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="#" title="사용꿀팁"> 5년 이상 미사용 계정 휴면처리 안내 공지 </a></td>
+                  <td>
+                    <a href="#" title="사용꿀팁">
+                      5년 이상 미사용 계정 휴면처리 안내 공지
+                    </a>
+                  </td>
                   <td><a href="#" title="사용꿀팁"> 운영자 </a></td>
                   <td><a href="#" title="사용꿀팁"> 2020-06-28 </a></td>
                   <td><a href="#" title="사용꿀팁"> 11 </a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="#" title="사용꿀팁"> 개인정보처리방침 개정 사전안내 </a></td>
+                  <td>
+                    <a href="#" title="사용꿀팁">
+                      개인정보처리방침 개정 사전안내
+                    </a>
+                  </td>
                   <td><a href="#" title="사용꿀팁"> 사용자1 </a></td>
                   <td><a href="#" title="사용꿀팁"> 2022-12-31 </a></td>
                   <td><a href="#" title="사용꿀팁"> 66 </a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="#" title="사용꿀팁"> 개인정보처리방침 개정 사전안내 </a></td>
+                  <td>
+                    <a href="#" title="사용꿀팁">
+                      개인정보처리방침 개정 사전안내
+                    </a>
+                  </td>
                   <td><a href="#" title="사용꿀팁"> 사용자2 </a></td>
                   <td><a href="#" title="사용꿀팁"> 2022-12-31 </a></td>
                   <td><a href="#" title="사용꿀팁"> 66 </a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="#" title="사용꿀팁"> 위치기반서비스방침 개정 내용 사전안내 </a></td>
+                  <td>
+                    <a href="#" title="사용꿀팁">
+                      위치기반서비스방침 개정 내용 사전안내
+                    </a>
+                  </td>
                   <td><a href="#" title="사용꿀팁"> 사용자3 </a></td>
                   <td><a href="#" title="사용꿀팁"> 2022-12-31 </a></td>
                   <td><a href="#" title="사용꿀팁"> 53 </a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="#" title="사용꿀팁"> 서비스 점검 시간 사전 안내 </a></td>
+                  <td>
+                    <a href="#" title="사용꿀팁">
+                      서비스 점검 시간 사전 안내
+                    </a>
+                  </td>
                   <td><a href="#" title="사용꿀팁"> 사용자4 </a></td>
                   <td><a href="#" title="사용꿀팁"> 2022-12-31 </a></td>
                   <td><a href="#" title="사용꿀팁"> 39 </a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="#" title="사용꿀팁"> 인터넷 익스플로러(IE) 지원 종료 안내 </a></td>
+                  <td>
+                    <a href="#" title="사용꿀팁">
+                      인터넷 익스플로러(IE) 지원 종료 안내
+                    </a>
+                  </td>
                   <td><a href="#" title="사용꿀팁"> 사용자5 </a></td>
                   <td><a href="#" title="사용꿀팁"> 2022-12-31 </a></td>
                   <td><a href="#" title="사용꿀팁"> 27 </a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="#" title="사용꿀팁"> 5년 이상 미사용 계정 휴면처리 안내 공지 </a></td>
+                  <td>
+                    <a href="#" title="사용꿀팁">
+                      5년 이상 미사용 계정 휴면처리 안내 공지
+                    </a>
+                  </td>
                   <td><a href="#" title="사용꿀팁"> 운영자 </a></td>
                   <td><a href="#" title="사용꿀팁"> 2022-12-31 </a></td>
                   <td><a href="#" title="사용꿀팁"> 11 </a></td>
                 </tr>
-
               </table>
-
             </section>
-            
+
             <!-- 인기글 -->
             <section class="fave">
               <table border="1">
@@ -319,95 +384,141 @@
                   <th>작성일</th>
                   <th>조회수</th>
                 </tr>
-                
+
                 <tr>
-                  <td><a href="#" title="사용꿀팁"> 개인정보처리방침 개정 사전안내 </a></td>
+                  <td>
+                    <a href="#" title="사용꿀팁">
+                      개인정보처리방침 개정 사전안내
+                    </a>
+                  </td>
                   <td><a href="#" title="사용꿀팁"> 사용자1 </a></td>
                   <td><a href="#" title="사용꿀팁"> 2022-12-31 </a></td>
                   <td><a href="#" title="사용꿀팁"> 66 </a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="#" title="사용꿀팁"> 개인정보처리방침 개정 사전안내 </a></td>
+                  <td>
+                    <a href="#" title="사용꿀팁">
+                      개인정보처리방침 개정 사전안내
+                    </a>
+                  </td>
                   <td><a href="#" title="사용꿀팁"> 사용자2 </a></td>
                   <td><a href="#" title="사용꿀팁"> 2022-12-31 </a></td>
                   <td><a href="#" title="사용꿀팁"> 66 </a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="#" title="사용꿀팁"> 위치기반서비스방침 개정 내용 사전안내 </a></td>
+                  <td>
+                    <a href="#" title="사용꿀팁">
+                      위치기반서비스방침 개정 내용 사전안내
+                    </a>
+                  </td>
                   <td><a href="#" title="사용꿀팁"> 사용자3 </a></td>
                   <td><a href="#" title="사용꿀팁"> 2022-12-31 </a></td>
                   <td><a href="#" title="사용꿀팁"> 53 </a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="#" title="사용꿀팁"> 서비스 점검 시간 사전 안내 </a></td>
+                  <td>
+                    <a href="#" title="사용꿀팁">
+                      서비스 점검 시간 사전 안내
+                    </a>
+                  </td>
                   <td><a href="#" title="사용꿀팁"> 사용자4 </a></td>
                   <td><a href="#" title="사용꿀팁"> 2022-12-31 </a></td>
                   <td><a href="#" title="사용꿀팁"> 39 </a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="#" title="사용꿀팁"> 인터넷 익스플로러(IE) 지원 종료 안내 </a></td>
+                  <td>
+                    <a href="#" title="사용꿀팁">
+                      인터넷 익스플로러(IE) 지원 종료 안내
+                    </a>
+                  </td>
                   <td><a href="#" title="사용꿀팁"> 사용자5 </a></td>
                   <td><a href="#" title="사용꿀팁"> 2022-12-31 </a></td>
                   <td><a href="#" title="사용꿀팁"> 27 </a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="#" title="사용꿀팁"> 5년 이상 미사용 계정 휴면처리 안내 공지 </a></td>
+                  <td>
+                    <a href="#" title="사용꿀팁">
+                      5년 이상 미사용 계정 휴면처리 안내 공지
+                    </a>
+                  </td>
                   <td><a href="#" title="사용꿀팁"> 운영자 </a></td>
                   <td><a href="#" title="사용꿀팁"> 2022-12-31 </a></td>
                   <td><a href="#" title="사용꿀팁"> 11 </a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="#" title="사용꿀팁"> 개인정보처리방침 개정 사전안내 </a></td>
+                  <td>
+                    <a href="#" title="사용꿀팁">
+                      개인정보처리방침 개정 사전안내
+                    </a>
+                  </td>
                   <td><a href="#" title="사용꿀팁"> 사용자1 </a></td>
                   <td><a href="#" title="사용꿀팁"> 2022-12-31 </a></td>
                   <td><a href="#" title="사용꿀팁"> 66 </a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="#" title="사용꿀팁"> 개인정보처리방침 개정 사전안내 </a></td>
+                  <td>
+                    <a href="#" title="사용꿀팁">
+                      개인정보처리방침 개정 사전안내
+                    </a>
+                  </td>
                   <td><a href="#" title="사용꿀팁"> 사용자2 </a></td>
                   <td><a href="#" title="사용꿀팁"> 2022-12-31 </a></td>
                   <td><a href="#" title="사용꿀팁"> 66 </a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="#" title="사용꿀팁"> 위치기반서비스방침 개정 내용 사전안내 </a></td>
+                  <td>
+                    <a href="#" title="사용꿀팁">
+                      위치기반서비스방침 개정 내용 사전안내
+                    </a>
+                  </td>
                   <td><a href="#" title="사용꿀팁"> 사용자3 </a></td>
                   <td><a href="#" title="사용꿀팁"> 2022-12-31 </a></td>
                   <td><a href="#" title="사용꿀팁"> 53 </a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="#" title="사용꿀팁"> 서비스 점검 시간 사전 안내 </a></td>
+                  <td>
+                    <a href="#" title="사용꿀팁">
+                      서비스 점검 시간 사전 안내
+                    </a>
+                  </td>
                   <td><a href="#" title="사용꿀팁"> 사용자4 </a></td>
                   <td><a href="#" title="사용꿀팁"> 2022-12-31 </a></td>
                   <td><a href="#" title="사용꿀팁"> 39 </a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="#" title="사용꿀팁"> 인터넷 익스플로러(IE) 지원 종료 안내 </a></td>
+                  <td>
+                    <a href="#" title="사용꿀팁">
+                      인터넷 익스플로러(IE) 지원 종료 안내
+                    </a>
+                  </td>
                   <td><a href="#" title="사용꿀팁"> 사용자5 </a></td>
                   <td><a href="#" title="사용꿀팁"> 2022-12-31 </a></td>
                   <td><a href="#" title="사용꿀팁"> 27 </a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="#" title="사용꿀팁"> 5년 이상 미사용 계정 휴면처리 안내 공지 </a></td>
+                  <td>
+                    <a href="#" title="사용꿀팁">
+                      5년 이상 미사용 계정 휴면처리 안내 공지
+                    </a>
+                  </td>
                   <td><a href="#" title="사용꿀팁"> 운영자 </a></td>
                   <td><a href="#" title="사용꿀팁"> 2022-12-31 </a></td>
                   <td><a href="#" title="사용꿀팁"> 11 </a></td>
                 </tr>
-
               </table>
-
+            </section>
           </section>
-
           <!-- 날씨 -->
         </section>
         <section class="weather"></section>

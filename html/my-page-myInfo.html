@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../css/my-page.css" />
+    <link rel="stylesheet" href="../css/my-page-myinfo.css" />
     <script
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=af34b09f8f2cdee07cf990ab549e6220"
@@ -118,8 +118,57 @@
             <div>내 정보 수정</div>
             <form action="#" method="post">
               <div id="box-body">
-                비밀번호 <input type="password" id="myPage-PW" />
-                <button type="submit">확인</button>
+                <table>
+                  <tr>
+                    <td>
+                      <tr colspan="3">
+                        <input type="image" />
+                        <br />
+                      </tr>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">
+                      <button type="submit">프로필 사진 변경</button><br />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>닉네임</td>
+                    <td>
+                      <input type="text" />
+                    </td>
+                    <td><button type="submit">중복 확인</button><br /></td>
+                  </tr>
+                  <tr>
+                    <td>이메일</td>
+                    <td>
+                      <input type="email" />
+                    </td>
+                    <td><button type="submit">인증번호</button><br /></td>
+                  </tr>
+                  <tr>
+                    <td>이메일 코드</td>
+                    <td>
+                      <input type="text" />
+                    </td>
+                    <td><button type="submit">확인</button><br /></td>
+                  </tr>
+                  <tr>
+                    <td>비밀번호</td>
+                    <td><input type="password" /> <br /></td>
+                  </tr>
+                  <tr>
+                    <td>비밀번호 확인</td>
+                    <td><input type="password" /> <br /><br /></td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">
+                      <button type="submit" id="updateMyInfo">
+                        회원정보 수정
+                      </button>
+                    </td>
+                  </tr>
+                </table>
               </div>
               <div></div>
             </form>

@@ -12,7 +12,7 @@ main {
     margin: auto;
 }
   
-/************헤더 부분 시작***********/
+/*****************************헤더 부분 시작*******************************/
 header {
     height: 130px;
     display: flex;
@@ -38,12 +38,22 @@ header > section:nth-child(1) {
     justify-content: center;
 }
 
-/**********바디 부분 시작***********/
+/****************************바디 부분 시작***********************************/
+
+.content{
+
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
 
 .content-2{
     display: flex;
     justify-content: center;
+    padding-top: 20px;
+    
 }
+
 
 #sign-in-area{
     width: 500px; 
@@ -103,7 +113,7 @@ header > section:nth-child(1) {
     height: 40px;
     display: flex;
     justify-content: center;
-    padding-top: 5px;
+    padding-top: 7px;
     cursor: pointer;
 }
 
@@ -124,12 +134,13 @@ header > section:nth-child(1) {
 
 
 /*카카오로 로그인하기 부분 article*/
+
 .sign-in-article-1{
 
     display: flex;
     justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 40px;
+    padding-top: 60px;
+    padding-bottom: 120px;
   
 }
 
@@ -140,6 +151,7 @@ header > section:nth-child(1) {
 
 /*카카오로 로그인 버튼*/
 .kakao-signin{
+
     border: 1px solid yellow;
     background-color: yellow;
     color: black;
@@ -167,7 +179,7 @@ body > ul{
     
 }
 
-/*푸터*/
+/*******************************************푸터*******************************************/
 footer {
     background-color: #d0d3c6;
     height: 150px;

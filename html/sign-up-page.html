@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="/css/sign-up-page.css">
 
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+
     <script
     src="https://kit.fontawesome.com/2f1bf0eac7.js"
     crossorigin="anonymous">
@@ -22,7 +24,7 @@
             <!--로고 영역(클릭하면 메인페이지로 넘어감)-->
             <section>
                 <a href ="#">
-                    <img src="/src/로고.png" id="home-logo">
+                    <img src="/src/logo.png" id="home-logo">
                 </a>
             </section>
 
@@ -65,24 +67,35 @@
                             <input type="file" name="profile-pic">
                             
 
-                        </section>                       
+                        </section>       
+                        
 
                     </fieldset>
 
-                      <!--회원가입/카카오로 시작하기-->
-                      <section>
+                    
+                    <!--회원가입/카카오로 시작하기-->
+                    <br>
+                    <section>
 
                         <article class="sign-up-article-1">
                             <button type="submit" id="signup-btn">회원가입</button><br>
                         </article >
 
                         <article class="sign-up-article-2">
-                            <a href="#"><div class="kakao-signup"><i class="fa-solid fa-comment" id="text-balloon"></i>카카오로 시작하기</div></a>
+                            <a href="javascript:void(0)" onclick="kakaoLogin();">
+                                <img src="/src/kakao_login_medium_wide.png">
+                            </a>
+                            
                         </article>
 
-                      </section>
+                    </section>
+
+                  
 
                 </form>
+
+
+                <script src="/js/kakao-start.js"></script>
 
 </body>
         

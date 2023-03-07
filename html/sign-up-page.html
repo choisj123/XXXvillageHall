@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="/css/sign-up-page.css">
 
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+
     <script
     src="https://kit.fontawesome.com/2f1bf0eac7.js"
     crossorigin="anonymous">
@@ -80,7 +82,10 @@
                         </article >
 
                         <article class="sign-up-article-2">
-                            <a href="#"><div class="kakao-signup"><i class="fa-solid fa-comment" id="text-balloon"></i>카카오로 시작하기</div></a>
+                            <a href="javascript:void(0)" onclick="kakaoLogin();">
+                                <img src="/src/kakao_login_medium_wide.png">
+                            </a>
+                            
                         </article>
 
                     </section>
@@ -88,7 +93,9 @@
                   
 
                 </form>
-                
+
+
+                <script src="/js/kakao-start.js"></script>
 
 </body>
         

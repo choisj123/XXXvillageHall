@@ -5,7 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../css/FAQ-page.css" />
+    <link rel="stylesheet" href="../css/my-page-myinfo.css" />
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=af34b09f8f2cdee07cf990ab549e6220"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=af34b09f8f2cdee07cf990ab549e6220&libraries=LIBRARY"
+    ></script>
     <script
       src="https://kit.fontawesome.com/2f1bf0eac7.js"
       crossorigin="anonymous"
@@ -25,16 +33,13 @@
           <article class="search-area">
             <!-- form 내부 input 태그 값을 서버 또는 페이지로 전달 -->
             <form action="#" name="search-form">
-              <!-- fieldset : form 내부에서 input을 종류별로 묶는 용도로 많이 사용 -->
-
               <fieldset>
-                <!-- autocomplete="off" : HTML 기본 자동완성 사용 X -->
                 <input
                   type="search"
                   id="query"
                   name="query"
                   autocomplete="off"
-                  placeholder="검색어를 입력해주세요."
+                  placeholder="검색어를 입력해주세요"
                 />
 
                 <!-- 검색버튼 -->
@@ -62,15 +67,14 @@
       <section class="body">
         <section class="left-body">
           <article>
-            <!-- 이미지 + 로그인 -->
-
-            <img src="../src/profile.png" /><br />
+            <!-- 프로필 이미지 + 로그인 -->
+            <img src="/src/profile.png" /><br />
             <a href="#" id="body-login"> 로그인</a>
           </article>
 
           <!-- 네비 (메뉴바)-->
           <nav>
-            <ul>
+            <ul id="main-menu">
               <li>
                 <i class="fa-solid fa-house" id="nav-home"></i>
                 <a href="#">홈</a>
@@ -91,59 +95,84 @@
                 <i class="fa-regular fa-circle-question" id="nav-faq"></i>
                 <a href="#">FAQ</a>
               </li>
+              <li>
+                <i class="fa-solid fa-gear" id="nav-mypage"></i>
+                <a href="#" id="mypage">마이페이지</a>
+                <ul id="sub-menu" style="display: none">
+                  <li>
+                    <a href="#">내 정보 수정</a>
+                  </li>
+                  <li>
+                    <a href="#">내 게시글 수정</a>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </nav>
         </section>
 
         <!-- 메인 콘텐츠 -->
         <section class="right-body">
-          <!-- 태그 -->
-          <article class="hashtag">
-            <ul>
-              <li><a href="#"> #이슈 </a></li>
-              <li><a href="#"> #맛집 </a></li>
-              <li><a href="#"> #취미 </a></li>
-              <li><a href="#"> #친목 </a></li>
-              <li><a href="#"> #추천 </a></li>
-            </ul>
-          </article>
-
-          <!--FAQ 질문 검색 부분-->
-          <article class="FAQ-search">
-            <!--FAQ 질문 검색창-->
-            <form action="#" name="FAQ-search-form">
-              <h3 class="FAQ-text">FAQ 자주 묻는 질문</h3>
-
-              <fieldset class="FAQ-search-fieldset">
-                <input
-                  type="search"
-                  id="query"
-                  name="query"
-                  autocomplete="off"
-                  placeholder="무엇이 궁금하실까요?"
-                />
-
-                <!--FAQ 질문 검색버튼-->
-                <button
-                  id="FAQ-search-btn"
-                  class="fa-solid fa-magnifying-glass"
-                ></button>
-              </fieldset>
+          <h3>마이페이지</h3>
+          <div class="myPage-box">
+            <div>내 정보 수정</div>
+            <form action="#" method="post">
+              <div id="box-body">
+                <table>
+                  <tr>
+                    <td>
+                      <tr colspan="3">
+                        <input type="image" />
+                        <br />
+                      </tr>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">
+                      <button type="submit">프로필 사진 변경</button><br />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>닉네임</td>
+                    <td>
+                      <input type="text" />
+                    </td>
+                    <td><button type="submit">중복 확인</button><br /></td>
+                  </tr>
+                  <tr>
+                    <td>이메일</td>
+                    <td>
+                      <input type="email" />
+                    </td>
+                    <td><button type="submit">인증번호</button><br /></td>
+                  </tr>
+                  <tr>
+                    <td>이메일 코드</td>
+                    <td>
+                      <input type="text" />
+                    </td>
+                    <td><button type="submit">확인</button><br /></td>
+                  </tr>
+                  <tr>
+                    <td>비밀번호</td>
+                    <td><input type="password" /> <br /></td>
+                  </tr>
+                  <tr>
+                    <td>비밀번호 확인</td>
+                    <td><input type="password" /> <br /><br /></td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">
+                      <button type="submit" id="updateMyInfo">
+                        회원정보 수정
+                      </button>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div></div>
             </form>
-
-            <!--FAQ 카테고리-->
-          </article>
-
-          <article class="category-article">
-            <a href="#" class="category"> 회원정보 </a>
-            <a href="#" class="category"> 프로필 </a>
-            <a href="#" class="category"> 게시글 </a>
-            <a href="#" class="category"> 기타 </a>
-          </article>
-
-          <article class="FAQ-board-article">
-            <div class="FAQ-container"></div>
-          </article>
+          </div>
         </section>
       </section>
     </main>
@@ -163,5 +192,7 @@
         <a href="#">고객센터</a>
       </article>
     </footer>
+
+    <script src="/js/my-page.js"></script>
   </body>
 </html>

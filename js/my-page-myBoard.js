@@ -43,12 +43,3 @@ mypage.addEventListener("click", function(){
     }
     
 })
-
-
-
-  
-  
-  
-  
-  
-  

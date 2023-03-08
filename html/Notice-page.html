@@ -37,7 +37,7 @@
       flex-direction: column;
      }
 
-     /*  
+    /* 
      #myContent ul > li:nth-last-of-type(1) {
       width: 50px;
      }
@@ -53,8 +53,8 @@
      #myContent ul > li:nth-last-of-type(5) {
       width: 50px;
      }
+      */
      
-     */
 
      #myContent ul > li {
       text-align: center;
@@ -165,7 +165,7 @@
                 <li>좋아요</li>
               </ul>
               
-              <ul class="testUl">
+              <ul class="Notice-Ul">
                 <li>1231</li>
                 <li>개인정보처리방침 개정 내용 사전안내</li>
                 <li>2020.12.02</li>
@@ -277,7 +277,7 @@
 
     <script>
       $(function () {
-        $(".testUl").on("click", function() {
+        $(".Notice-Ul").on("click", function() {
           console.log($(this).next())
           if($(this).next().css("display") == 'none') {
             $(this).siblings("div").slideUp();

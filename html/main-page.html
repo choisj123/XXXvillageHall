@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/main-page.css" />
     <script>
       type = "text/javascript";
@@ -17,7 +18,6 @@
         "//dapi.kakao.com/v2/maps/sdk.js?appkey=af34b09f8f2cdee07cf990ab549e6220&libraries=LIBRARY";
     </script>
 
-    <link rel="stylesheet" href="../css/main-page.css" />
     <script
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=196b8c346b121bd08b2a475bfa001dd0"
@@ -149,15 +149,15 @@
             <div>
               <label for="category">카테고리:</label>
               <select onchange="showMarkersByCategory(this.value)">
-                  <option value="전체">전체글</option>
-                  <option value="이슈">이슈</option>
-                  <option value="명소">명소</option>
-                  <option value="취미">취미</option>
-                  <option value="친목">친목</option>
-                  <option value="추천">추천</option>
-                </select>
+                <option value="전체">전체글</option>
+                <option value="이슈">이슈</option>
+                <option value="명소">명소</option>
+                <option value="취미">취미</option>
+                <option value="친목">친목</option>
+                <option value="추천">추천</option>
+              </select>
             </div>
-            <div id="map" style="width:921px;height:500px;"></div>
+            <div id="map" style="width: 921px; height: 500px"></div>
           </section>
 
           <!-- 날짜 -->
@@ -476,6 +476,9 @@
         <a href="#">고객센터</a>
       </article>
     </footer>
+
+    <script src="/js/main-page.js"></script>
+
     <script src="/js/main-page-Map-API.js"></script>
   </body>
 </html>

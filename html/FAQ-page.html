@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../css/FAQ-page.css" />
+    <script
+      src="https://kit.fontawesome.com/2f1bf0eac7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <!-- 클릭시 메인으로 이동하는 로고 -->
+        <section>
+          <a href="#">
+            <img src="/src/logo.png" id="home-logo" />
+          </a>
+        </section>
+
+        <section>
+          <article class="search-area">
+            <!-- form 내부 input 태그 값을 서버 또는 페이지로 전달 -->
+            <form action="#" name="search-form">
+              <!-- fieldset : form 내부에서 input을 종류별로 묶는 용도로 많이 사용 -->
+
+              <fieldset>
+                <!-- autocomplete="off" : HTML 기본 자동완성 사용 X -->
+                <input
+                  type="search"
+                  id="query"
+                  name="query"
+                  autocomplete="off"
+                  placeholder="검색어를 입력해주세요."
+                />
+
+                <!-- 검색버튼 -->
+                <button
+                  id="search-btn"
+                  class="fa-solid fa-magnifying-glass"
+                ></button>
+              </fieldset>
+            </form>
+          </article>
+        </section>
+
+        <!-- 로그인 / 회원가입 -->
+        <section class="login-signup-area">
+          <div>
+            <!-- 자물쇠 아이콘 -->
+            <a href="#" id="login" class="fa-solid fa-lock">&nbsp;로그인</a>
+          </div>
+
+          <a href="#" id="signup">회원가입</a>
+        </section>
+      </header>
+
+      <!-- 바디 부분 시작 -->
+      <section class="body">
+        <section class="left-body">
+          <article>
+            <!-- 이미지 + 로그인 -->
+
+            <img src="../src/profile.png" /><br />
+            <a href="#" id="body-login"> 로그인</a>
+          </article>
+
+          <!-- 네비 (메뉴바)-->
+          <nav>
+            <ul>
+              <li>
+                <i class="fa-solid fa-house" id="nav-home"></i>
+                <a href="#">홈</a>
+              </li>
+              <li>
+                <i class="fa-regular fa-bell" id="nav-notice"></i>
+                <a href="#"> 공지사항</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-globe" id="nav-all"></i>
+                <a href="#">전체글</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-bookmark" id="nav-popular"></i>
+                <a href="#">인기글</a>
+              </li>
+              <li>
+                <i class="fa-regular fa-circle-question" id="nav-faq"></i>
+                <a href="#">FAQ</a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <!-- 메인 콘텐츠 -->
+        <section class="right-body">
+          <!-- 태그 -->
+          <article class="hashtag">
+            <ul>
+              <li><a href="#"> #이슈 </a></li>
+              <li><a href="#"> #맛집 </a></li>
+              <li><a href="#"> #취미 </a></li>
+              <li><a href="#"> #친목 </a></li>
+              <li><a href="#"> #추천 </a></li>
+            </ul>
+          </article>
+
+          <!--FAQ 질문 검색 부분-->
+          <article class="FAQ-search">
+            <!--FAQ 질문 검색창-->
+            <form action="#" name="FAQ-search-form">
+              <h3 class="FAQ-text">FAQ 자주 묻는 질문</h3>
+
+              <fieldset class="FAQ-search-fieldset">
+                <input
+                  type="search"
+                  id="query"
+                  name="query"
+                  autocomplete="off"
+                  placeholder="무엇이 궁금하실까요?"
+                />
+
+                <!--FAQ 질문 검색버튼-->
+                <button
+                  id="FAQ-search-btn"
+                  class="fa-solid fa-magnifying-glass"
+                ></button>
+              </fieldset>
+            </form>
+
+            <!--FAQ 카테고리-->
+          </article>
+
+          <article class="category-article">
+            <a href="#" class="category"> 회원정보 </a>
+            <a href="#" class="category"> 프로필 </a>
+            <a href="#" class="category"> 게시글 </a>
+            <a href="#" class="category"> 기타 </a>
+          </article>
+
+          <article class="FAQ-board-article">
+
+            <div>
+              <table class="FAQ-container" border="0" width="900">
+                
+                <thead>
+                  <tr>
+
+                    <th> 구분</th>
+                    <th> 제목</th>
+                    <th> 작성일</th>
+                    <th> 조회</th>
+                    <th> 좋아요</th>
+    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>탈퇴/기타</strong></td>
+                    <td> 회원 탈퇴를 취소하고 싶습니다.</td>
+                    <td>2020.01.23</td>
+                    <td>3578</td>
+                    <td>77</td>
+                  </tr>
+  
+                  <tr>
+                    <td><strong>탈퇴/기타</strong></td>
+                    <td> 회원 탈퇴는 어떻게 하나요?</td>
+                    <td>2020.01.23</td>
+                    <td>3239</td>
+                    <td>89</td>
+                  </tr>
+    
+                  <tr>
+                    <td><strong>로그인/정보</strong></td>
+                    <td> 메인 로그인이 안됩니다.</td>
+                    <td>2021.10.21</td>
+                    <td>2280</td>
+                    <td>56</td>
+                  </tr>
+    
+                  <tr>
+                    <td><strong>로그인/정보</strong></td>
+                    <td>소셜 로그인(카카오) 연동을 해제하고 싶어요</td>
+                    <td>2021.11.23</td>
+                    <td>1120</td>
+                    <td>80</td>
+                  </tr>
+  
+                  <tr>
+                    <td><strong>로그인/정보</strong></td>
+                    <td>아이디와 비밀번호가 기억나지 않아요</td>
+                    <td>2021.11.30</td>
+                    <td>1002</td>
+                    <td>78</td>
+                  </tr>
+    
+                  <tr>
+                    <td><strong>로그인/정보</strong></td>
+                    <td>회원정보 수정은 어디서 하나요?</td>
+                    <td>2021.09.11</td>
+                    <td>998</td>
+                    <td>76</td>
+                  </tr>
+    
+                  <tr>
+                    <td><strong>로그인/정보</strong></td>
+                    <td>비밀번호 변경은 어디서 하나요?</td>
+                    <td>2022.02.22</td>
+                    <td>865</td>
+                    <td>43</td>
+                  </tr>
+    
+                  <tr>
+                    <td><strong>가입/인증</strong></td>
+                    <td>이메일 인증 시 이미 존재해나는 이메일이라고 뜰 때는 어떻게 해야하나요?</td>
+                    <td>2022.06.23</td>
+                    <td>724</td>
+                    <td>27</td>
+                  </tr>
+    
+                  <tr>
+                    <td><strong>가입/인증</strong></td>
+                    <td>본인 인증이 안되는 경우에는 어떻게 해야하나요?</td>
+                    <td>2022.06.23</td>
+                    <td>665</td>
+                    <td>21</td>
+                  </tr>
+    
+                  <tr>
+                    <td><strong>가입/인증</strong></td>
+                    <td>본인 인증을 잘못했는데 초기화 가능한가요?</td>
+                    <td>2022.11.23</td>
+                    <td>332</td>
+                    <td>64</td>
+                  </tr>
+                </tbody>
+
+                <tfoot>
+
+                </tfoot>
+              
+              
+
+
+            </table>
+            </div>
+
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <!-- 푸터 -->
+
+    <footer>
+      <p>Copyright &copy; 2023. Villege Hall Community. All rights reserved</p>
+
+      <article>
+        <a href="#">프로젝트 소개</a>
+        <span>|</span>
+        <a href="#">이용약관</a>
+        <span>|</span>
+        <a href="#">개인정보처리방침</a>
+        <span>|</span>
+        <a href="#">고객센터</a>
+      </article>
+    </footer>
+  </body>
+</html>

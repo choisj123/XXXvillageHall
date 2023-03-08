@@ -12,6 +12,8 @@
     margin: auto;
   }
   
+  /********************** 헤더 부분**********************************/
+  
   header {
     height: 130px;
     display: flex;
@@ -96,14 +98,17 @@
     color: white;
   }
   
+  /********************** 바디 부분*******************************/
+  
   /* 큰 바디부분 */
   
   .body {
     display: flex;
+    height: 980px;
   }
   
   .left-body {
-    flex-basis: 19%;
+    flex-basis: 215px;
     border-right: 1px solid #55710f;
     flex-direction: column;
   }
@@ -121,11 +126,13 @@
     text-decoration: none;
   }
   
-  nav > ul {
+  
+nav > ul {
     display: flex;
     color: #55710f;
     flex-direction: column;
     list-style: none;
+    width: 216px;
   }
   
   nav li:first-of-type {
@@ -148,93 +155,14 @@
     color: white;
   
   }
-  
+
   .right-body {
-    flex-basis: 71%;
-  } 
-
-
-.board{
-    border: 1px solid black;
-    width: 865px;
-    margin-left: 7%;
-    height: 50px
-    
-    
-    
-
-}
-.board-nav{
-    display: flex;
-
-    
-    
-    
-
-}
-
-.nav-left{
-    margin-left: 20px;
-    flex-basis: 50%;
-    margin-top: 13px;
-    
-}
-.nav-right{
-    flex-basis: 50%;
-    text-align: end;
-    margin-right: 20px;
-    margin-top: 13px;
-    
-}
-/* test */
-
-
-.board-content{
-    width: 865px;
-    border: 1px solid black;
-    height: 600px;
-    margin-left: 7%;
-    border-bottom: none;
-    border-top: none;
-}
-
-.none{
-    width: 865px;
-    height: 50px;
-    border: 1px solid black;
-    margin-left: 7%;
-    margin-bottom: 300px;
-    
-}
-
-.write{
-  width: 80px;
-  height: 40px;
-  margin-top: 0.5%;
-  margin-left : 90%;
-}
-
-.board-table{
-    width: 100%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /* footer */
+    flex-basis: 75%;
+  }
   
-.hashtag {
+  .hashtag {
     display: flex;
+    margin-bottom: 100px;
   }
   
   .hashtag ul {
@@ -253,7 +181,47 @@
     text-decoration: none;
     font-weight: bold;
   }
+  /*Notice카테고리 */ 
+
+ #Notice-name {
+    margin-left: 150px;
+ }
+
+  #myContent {
+    display: block;
+  }
+
+  .thead{
+    border: 1px solid rgb(6, 6, 6);
+  }
+
+  .tabcontent {
+    display: none;
+    margin-left: 150px;
+    padding: 6px 12px;
+    border: 1px solid rgb(6, 6, 6);
+  }
+
+  .contentTable, .commentTable, .likeTable {
+    width: 100%;
+  }
+
+  .contentTable tr, .likeTable tr {
+    line-height: 2;
+  }
+
+  .contentTable td, .likeTable td{
+    text-align: center; 
+  }
+
+  .contentTable td a, .commentTable td a, .likeTable td a {
+    text-decoration: none;
+    color: black;
+  }
+
   
+  
+  /********************** 푸터 부분**********************************/
   footer {
     background-color: #d0d3c6;
     height: 150px;

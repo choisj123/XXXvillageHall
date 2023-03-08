@@ -46,7 +46,26 @@ mypage.addEventListener("click", function(){
 
 
 
-  
+  // 페이지당 게시글 개수와 총 게시글 수
+const postsPerPage = 10;
+const totalPosts = 50;
+
+// 총 페이지 수
+const totalPages = Math.ceil(totalPosts / postsPerPage);
+
+// 페이지 번호 목록 생성 함수
+function renderPageNumbers() {
+  let pageNumbers = "";
+  for (let i = 1; i <= totalPages; i++) {
+    pageNumbers += `<a href="#" onclick="goToPage(${i})">${i}</a> `;
+  }
+  document.getElementById("pageNumbers").innerHTML = pageNumbers;
+}
+
+// 페이지 이동 함수
+function goToPage(pageNumber) {
+  // 해당 페이지로 이동하는 로직을 작성하세요.
+}
   
   
   

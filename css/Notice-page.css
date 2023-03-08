@@ -189,6 +189,7 @@ nav > ul {
 
   #myContent {
     display: block;
+    border-radius: 5px;
   }
 
   .thead{

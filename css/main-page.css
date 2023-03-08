@@ -118,8 +118,8 @@ header > section:nth-of-type(3) {
 }
 
 .left-body a {
-  color: #55710f;
   text-decoration: none;
+  color: #55710f;
 }
 
 nav > ul {
@@ -150,7 +150,7 @@ nav ul li table td {
 
 .right-body {
   flex-basis: 80%;
-  border: 1px solid black;
+  border: 1px solid #55710f;
 }
 
 /* ************ 지도 API SECTION 가급적 건들지 말아주세요 ㅠㅠㅠ ************* */
@@ -160,7 +160,7 @@ nav ul li table td {
 }
 
 .container div {
-  border: 1px solid black;
+  border: 1px solid #55710f;
 }
 
 .info {
@@ -309,6 +309,9 @@ nav ul li table td {
   display: flex;
   list-style: none;
 }
+.right-body {
+  border: none;
+}
 
 .right-body article:first-of-type {
   color: black;
@@ -340,12 +343,11 @@ nav ul li table td {
 
 .weather {
   height: 15%;
-  border: 1px solid yellow;
 }
 
 .notice-fave > section {
   margin-inline-end: 30px;
-  border: solid 1px black;
+  border: solid 1px #55710f;
 }
 
 .notice {
@@ -355,7 +357,7 @@ nav ul li table td {
 .fave {
   height: 80%;
 }
-
+/* #d0d3c6 #8f9779 */
 footer {
   background-color: #d0d3c6;
   height: 150px;

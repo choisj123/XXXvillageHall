@@ -16,12 +16,22 @@
     crossorigin="anonymous"></script>
 
     <style>
-     #myContent > ul{
+     #myContent{
       list-style: none;
-      display: flex;
-      justify-content: space-around;
+      display: table;
       text-align: center;
+      width: 100%;
+      height: 300px;
      }
+
+    .Notice-Ul{
+      display: table-row;
+     }
+     
+    .cell {
+      display: table-cell;
+      text-align: center;
+    }
 
      .tabcontent div {
         width: 100%;
@@ -29,36 +39,13 @@
         border-radius: 5px;
         display: none;
         padding: 10px;
+        text-align: center;
+        justify-content: center;
+      margin: auto;
   
      }
 
-     #myContent {
-      display: flex;
-      flex-direction: column;
-     }
 
-    /* 
-     #myContent ul > li:nth-last-of-type(1) {
-      width: 50px;
-     }
-     #myContent ul > li:nth-last-of-type(2) {
-      width: 500px;
-     }
-     #myContent ul > li:nth-last-of-type(3) {
-      width:50px;
-     }
-     #myContent ul > li:nth-last-of-type(4) {
-      width: 50px;
-     }
-     #myContent ul > li:nth-last-of-type(5) {
-      width: 50px;
-     }
-      */
-     
-
-     #myContent ul > li {
-      text-align: center;
-     }
 
   </style>
 
@@ -157,20 +144,20 @@
     
             <div id="myContent" class="tabcontent">
 
-              <ul class="a">
-                <li>글번호</li>
-                <li>제목</li>
-                <li>작성일</li>
-                <li>조회</li>
-                <li>좋아요</li>
+              <ul class="Notice-Ul">
+                <li class="cell">글번호</li>
+                <li class="cell">제목</li>
+                <li class="cell">작성일</li>
+                <li class="cell">조회</li>
+                <li class="cell">좋아요</li>
               </ul>
               
               <ul class="Notice-Ul">
-                <li>1231</li>
-                <li>개인정보처리방침 개정 내용 사전안내</li>
-                <li>2020.12.02</li>
-                <li>19</li>
-                <li>19</li>
+                <li class="cell">1231</li>
+                <li class="cell">개인정보처리방침 개정 내용 사전안내</li>
+                <li class="cell">2020.12.02</li>
+                <li class="cell">19</li>
+                <li class="cell">19</li>
               </ul>
               <div>
                 <form>
@@ -186,12 +173,12 @@
                 </form>
               </div>
               
-              <ul class="testUl">
-                <li>993</li>
-                <li>위치기반 서비스 개정 내용 사전안내</li>
-                <li>2020.12.02</li>
-                <li>19</li>
-                <li>19</li>
+              <ul class="Notice-Ul">
+                <li class="cell">993</li>
+                <li class="cell">위치기반 서비스 개정 내용 사전안내</li>
+                <li class="cell">2020.12.02</li>
+                <li class="cell">19</li>
+                <li class="cell">19</li>
               </ul>
               <div>
                 <form>
@@ -205,48 +192,48 @@
                 </form>
               </div>
               
-              <ul class="testUl">
-                <li>951</li>
-                <li>서비스 점검 시간 사전 안내</li>
-                <li>2020.12.02</li>
-                <li>19</li>
-                <li>19</li>
+              <ul class="Notice-Ul">
+                <li class="cell">951</li>
+                <li class="cell">서비스 점검 시간 사전 안내</li>
+                <li class="cell">2020.12.02</li>
+                <li class="cell">19</li>
+                <li class="cell">19</li>
               </ul>
               <div></div>
 
-              <ul class="testUl">
-                <li>831</li>
-                <li>인터넷 익스플로러(IE) 지원 종료 안내</li>
-                <li>2020.12.02</li>
-                <li>19</li>
-                <li>19</li>
+              <ul class="Notice-Ul">
+                <li class="cell">831</li>
+                <li class="cell">인터넷 익스플로러(IE) 지원 종료 안내</li>
+                <li class="cell">2020.12.02</li>
+                <li class="cell">19</li>
+                <li class="cell">19</li>
               </ul>
               <div></div>
 
-              <ul class="testUl">
-                <li>556</li>
-                <li>저작권 도용 관련 게시글 안내 공지</li>
-                <li>2020.12.02</li>
-                <li>19</li>
-                <li>19</li>
+              <ul class="Notice-Ul">
+                <li class="cell">556</li>
+                <li class="cell">저작권 도용 관련 게시글 안내 공지</li>
+                <li class="cell">2020.12.02</li>
+                <li class="cell">19</li>
+                <li class="cell">19</li>
               </ul>
               <div></div>
 
-              <ul class="testUl">
-                <li>512</li>
-                <li>5년 이상 미사용 계정 휴면처리 안내 공지</li>
-                <li>2020.12.02</li>
-                <li>19</li>
-                <li>19</li>
+              <ul class="Notice-Ul">
+                <li class="cell">512</li>
+                <li class="cell">5년 이상 미사용 계정 휴면처리 안내 공지</li>
+                <li class="cell">2020.12.02</li>
+                <li class="cell">19</li>
+                <li class="cell">19</li>
               </ul>
               <div></div>
 
-              <ul class="testUl">
-                <li>323</li>
-                <li>서비스 점검 시간 사전 안내(~12/20)</li>
-                <li>2020.12.02</li>
-                <li>19</li>
-                <li>19</li>
+              <ul class="Notice-Ul">
+                <li class="cell">323</li>
+                <li class="cell">서비스 점검 시간 사전 안내(~12/20)</li>
+                <li class="cell">2020.12.02</li>
+                <li class="cell">19</li>
+                <li class="cell">19</li>
               </ul>
               <div></div>
 

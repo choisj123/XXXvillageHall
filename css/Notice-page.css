@@ -189,6 +189,7 @@ nav > ul {
 
   #myContent {
     display: block;
+    border-radius: 5px;
   }
 
   .thead{
@@ -204,6 +205,7 @@ nav > ul {
 
   .contentTable, .commentTable, .likeTable {
     width: 100%;
+    margin-bottom : 15px;
   }
 
   .contentTable tr, .likeTable tr {

@@ -184,42 +184,68 @@ nav > ul {
   /*Notice카테고리 */ 
 
  #Notice-name {
-    margin-left: 150px;
+    margin-left: 50px;
  }
 
   #myContent {
-    display: block;
+    border: 1px solid black;
     border-radius: 5px;
-  }
-
-  .thead{
-    border: 1px solid rgb(6, 6, 6);
-  }
-
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    height: 70%;
+   }
+   
   .tabcontent {
-    display: none;
-    margin-left: 150px;
+    list-style: none;
+    margin-left: 50px;
     padding: 6px 12px;
     border: 1px solid rgb(6, 6, 6);
+    justify-content: space-between;
+    text-align: center;
   }
 
-  .contentTable, .commentTable, .likeTable {
-    width: 100%;
-    margin-bottom : 15px;
+  .tabcontent div {
+    display: none;
   }
 
-  .contentTable tr, .likeTable tr {
-    line-height: 2;
-  }
+  .Notice-Ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+   }
+   
+   .p {
+    margin-bottom: 20px;
+   }
+   .tabcontent ul{
+    display: flex;
+   }
 
-  .contentTable td, .likeTable td{
-    text-align: center; 
-  }
+   .tabcontent ul :nth-of-type(1){
+    flex-basis: 10%;
+   }
 
-  .contentTable td a, .commentTable td a, .likeTable td a {
-    text-decoration: none;
-    color: black;
-  }
+   .tabcontent ul :nth-of-type(2){
+    flex-basis: 40%;
+   }
+
+   .tabcontent ul :nth-of-type(3){
+    flex-basis: 10%;
+   }
+
+   .tabcontent ul :nth-of-type(4){
+    flex-basis: 15%;
+   }
+
+   .tabcontent ul :nth-of-type(5){
+    flex-basis: 15%;
+   }
+
+
+   
+
+ 
 
   
   

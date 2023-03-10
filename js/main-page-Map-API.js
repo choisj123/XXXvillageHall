@@ -11,28 +11,43 @@ var markers = [];
 // 마커 데이터
 var markersData = [
   {
-    name: "이슈",
+    name: "정훈쓰",
     location: new kakao.maps.LatLng(37.566826, 126.9786567),
+    title : "글제목1",
+    createAt : "2023-03-08 10:00:00",
+    content: "살려주세요",
     category: "이슈"
   },
   {
-    name: "국회의사당",
+    name: "수진쓰",
     location: new kakao.maps.LatLng(37.549264, 126.913598),
+    title : "글제목2",
+    createAt : "2023-03-08 11:00:00",
+    content: "시간 너무 안가요",
     category:"명소" 
   },
   {
-    name: "족구할사람",
+    name: "정윤쓰",
     location: new kakao.maps.LatLng(37.555284, 126.969833),
+    title : "글제목3",
+    createAt: "2023-03-08 12:40:00",
+    content: "자고싶다",
     category:"취미"
   },
   {
-    name: "ㅇㅇㅂㅇㅂㅇ",
+    name: "동준쓰",
     location: new kakao.maps.LatLng(37.575868, 126.976781),
+    title : "글제목4",
+    createAt: "2023-03-08 22:10:03",
+    content: "집에가고싶어요",
     category:"친목"
   },
   {
-    name: "남산타워",
+    name: "민성쓰",
     location: new kakao.maps.LatLng(37.551457, 126.988244),
+    title : "글제목5",
+    createAt: "2023-03-08 20:50:00",
+    content: "안녕하세요",
     category: "추천"
   }
 ];
@@ -54,17 +69,15 @@ for (var i = 0; i < markersData.length; i++) {
               '<!-- header --> ' +
               '<div class="info">' +
               '  <div class="title">' + 
-              '    홍길동' +
+                  markersData[i].name +
               '  </div>' +
-              '    <div class="close" onclick="closeOverlay()" title="닫기"></div>' +
+              '    <div class="close">' + markersData[i].createAt + '</div>' +
               '</div>' +
               '<!-- nav -->' +
               '<div class="nav-section">' +
-              '  <!-- display : flex   -->' +
               '  <div class="left">' +
               '    <a href="#">[서초구]</a>' +
-              '    <a href="#">#카페</a>' +
-              '    <a href="#">#맛집</a>' +
+              '    <a href="#">' + markersData[i].category + '</a>' +
               '  </div>' +
               '  <div class="right">' +
               '    <span>조회수 400</span>' +
@@ -79,11 +92,12 @@ for (var i = 0; i < markersData.length; i++) {
               '  <div class="main-content">'+
               '    <!-- 글제목 -->'+
               '    <div>'+
-              '      <p>' + marker.getTitle() +'</p>'+
+              '      <p>' + markersData[i].title +
+              '</p>'+
               '    </div>'+
               '    <!-- 작성글 -->'+
               '    <div>'+
-              '      <p>저쩌구</p>'+
+              '      <p>' + markersData[i].content + '</p>'+
               '    </div>'+
               '  </div>'+
               '  <!-- aside -->'+
@@ -92,7 +106,7 @@ for (var i = 0; i < markersData.length; i++) {
           ' </div>',
           });
           infowindow.open(map, marker);
-          map.addListener('click', function() {
+          map.addListener('click',  function() {
             infowindow.close();
           });
       }

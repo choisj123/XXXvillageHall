@@ -1,3 +1,7 @@
+
+
+
+
 var mapContainer = document.getElementById('map'),
     mapOption = { 
         center: new kakao.maps.LatLng(37.566826, 126.9786567), 
@@ -6,13 +10,15 @@ var mapContainer = document.getElementById('map'),
 
 var map = new kakao.maps.Map(mapContainer, mapOption); 
 
+
 var markers = [];
+
 
 // 마커 데이터
 var markersData = [
   {
     name: "정훈쓰",
-    location: new kakao.maps.LatLng(37.566826, 126.9786567),
+    location: new kakao.maps.LatLng(37.549264, 124.913598),
     title : "글제목1",
     createAt : "2023-03-08 10:00:00",
     content: "살려주세요",
@@ -52,6 +58,9 @@ var markersData = [
   }
 ];
 
+
+
+
 for (var i = 0; i < markersData.length; i++) {
   var marker = new kakao.maps.Marker({
     position: markersData[i].location,
@@ -65,7 +74,7 @@ for (var i = 0; i < markersData.length; i++) {
       return function() {
           var infowindow = new kakao.maps.InfoWindow({
               content: 
-              '<div class="container">' +
+              '<div class="map-container">' +
               '<!-- header --> ' +
               '<div class="info">' +
               '  <div class="title">' + 

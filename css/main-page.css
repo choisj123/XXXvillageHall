@@ -1,10 +1,10 @@
 /* ************ 지도 API SECTION 가급적 건들지 말아주세요 ㅠㅠㅠ ************* */
-.container {
+.map-container {
   width: 300px;
   height: 200px;
 }
 
-.container div {
+.map-container div {
   border: 1px solid #55710f;
 }
 
@@ -132,17 +132,6 @@
   border-left: 10px solid transparent;
 }
 
-.customoverlay .overlaybody {
-  padding: 10px;
-}
-.customoverlay .btn-close {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  color: #888;
-  font-size: 14px;
-  text-decoration: none;
-}
 
 /* ************여기까지 지도 API SECTION 가급적 건들지 말아주세요 ㅠ퓨ㅠ**************/
 

@@ -183,26 +183,19 @@ nav > ul {
   }
   /*Notice카테고리 */ 
 
- #Notice-name {
+  #Notice-name {
     margin-left: 50px;
- }
-
-  #myContent {
-    border: 1px solid black;
-    border-radius: 5px;
-    list-style: none;
-    text-align: center;
+  }
+ 
+  .tabcontent {
     width: 100%;
     height: 70%;
-   }
-   
-  .tabcontent {
-    list-style: none;
-    margin-left: 50px;
     padding: 6px 12px;
+    margin-left: 50px;
     border: 1px solid rgb(6, 6, 6);
-    justify-content: space-between;
+    list-style: none;
     text-align: center;
+    justify-content: space-between;
   }
 
   .tabcontent div {
@@ -218,10 +211,7 @@ nav > ul {
    .p {
     margin-bottom: 20px;
    }
-   .tabcontent ul{
-    display: flex;
-   }
-
+  
    .tabcontent ul :nth-of-type(1){
     flex-basis: 10%;
    }

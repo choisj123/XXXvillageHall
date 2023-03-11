@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="/css/free-board.css" />
+    <link rel="stylesheet"  href="/css/popular-board.css" />
     <script
       src="https://kit.fontawesome.com/2f1bf0eac7.js"
       crossorigin="anonymous"
     ></script>
+
   </head>
   <body>
     <main>
@@ -17,7 +18,7 @@
         <!-- 클릭시 메인으로 이동하는 로고 -->
         <section>
           <a href="#">
-            <img src="/src/logo.png" id="home-logo" />
+            <img src="../src/로고.png" id="home-logo" />
           </a>
         </section>
 
@@ -68,8 +69,8 @@
           <nav>
             <ul>
               <li>
-                <i class="fa-solid fa-house" id="nav-home"></i>
-                <a href="#">홈</a>
+                  <i class="fa-solid fa-house" id="nav-home"></i>
+                  <a href="#">홈</a>
               </li>
               <li>
                 <i class="fa-regular fa-bell" id="nav-notice"></i>
@@ -107,103 +108,76 @@
           <!-- 게시판 부분 -->
           <div class="board">
             <div class="board-nav">
-              <div class="nav-left">
-                <span>전체글</span>
-              </div>
-              <div class="nav-right">
-                <span><a href="#">더보기</a></span>
-              </div>
+                <div class="nav-left">
+                  <span>인기글</span>
+                </div>
+                <div class="nav-right">
+                  <span><a href="#">더보기</a></span>
+                </div>
             </div>
           </div>
-          <div class="board-content">
-            <table class="board-table">
-              <thead>
-                <tr>
-                  <th>제목</th>
-                  <th>등록자</th>
-                  <th>등록일</th>
-                  <th>조회수</th>
-                  <th>좋아요</th>
-                </tr>
-              </thead>
+            <div class="board-content">
+              <table class="board-table">
+                <div>
+                  <ol><h3>제목</h3>
+                   <li>어기 지금 사람 많은 이유 아시는분</li><br>
+                   <li>강남점 오늘 자바 스터디 같이 하실분</li><br>
+                   <li>역삼역 스타벅스 나른하다.</li><br>
+                   <li>오늘 저녁은 미분당 강남점</li><br>
+                   <li>빔 프로젝터 대여합니다.</li><br>
+                   <li>현백 앞 코노 추천</li><br>
+                  </ol>
+                </div>
+                <div>
+                  <ol class="ulist"><h3>등록자</h3>
+                    <li>정윤스</li><br>
+                    <li>수진스</li><br>
+                    <li>민수스</li><br>
+                    <li>동준스</li><br>
+                    <li>정훈스</li><br>
+                    <li>민성스</li><br>
+                   </ol>
+                </div>
+                <div>
+                  <ol class="ulist"><h3>등록일</h3>
+                    <li>2023-01-05</li><br>
+                    <li>2023-01-05</li><br>
+                    <li>2023-01-05</li><br>
+                    <li>2023-01-05</li><br>
+                    <li>2023-01-05</li><br>
+                    <li>2023-01-05</li><br>
+                   </ol>
+                </div>
+                <div>
+                  <ol class="ulist"><h3>조회수</h3>
+                    <li>123</li><br>
+                    <li>45</li><br>
+                    <li>46</li><br>
+                    <li>46</li><br>
+                    <li>46</li><br>
+                    <li>46</li><br>
+                   </ol>
+                </div>
+                <div>
+                  <ol class="ulist"><h3>좋아요</h3>
+                    <li>123</li><br>
+                    <li>45</li><br>
+                    <li>46</li><br>
+                    <li>46</li><br>
+                    <li>46</li><br>
+                    <li>46</li><br>
+                </div>
 
-<<<<<<< HEAD:html/free-board.html
-                <tbody>
-                  <tr>
-                    <td><li>여기 지금 사람 많은 이유 아시는분</li></td>
-                    <th>정윤쓰</th>
-                    <th>2023-01-15</th>
-                    <th>123</th>
-                    <th>5</th>
-                  </tr>
 
-                  <tr>
-                    <td><li>강남점 오늘 자바 스터디 같이 하실분</li></td>
-                    <th>수진쓰</th>
-                    <th>2023-01-05</th>
-                    <th>233</th>
-                    <th>12</th>
-                  </tr>
-                  <tr>
-                    <td><li>역삼역 스타벅스 나른하다</li></td>
-                    <th>민수스</th>
-                    <th>2023-01-05</th>
-                    <th>545</th>
-                    <th>6</th>
-                  </tr>
-                  <tr>
-                    <td><li>오늘 저녁은 미분당 강남점</li></td>
-                    <th>동준스</th>
-                    <th>2023-01-05</th>
-                    <th>656</th>
-                    <th>6</th>
-                  </tr>
-                  <tr>
-                    <td><li>빔 프로젝터 대여합니다.</li></td>
-                    <th>정훈스</th>
-                    <th>2023-01-05</th>
-                    <th>500</th>
-                    <th>8</th>
-                  </tr>
-                  <tr>
-                    <td><li>현대백화점 앞 옷추천</li></td>
-                    <th>민성스</th>
-                    <th>2023-01-05</th>
-                    <th>500</th>
-                    <th>3</th>
-                  </tr>
+                 
                 </tbody>
 
               </table>
+                    
             </div>
             <!-- 공백 -->
             <div class="none"><button class="write">글작성</button></div>
-        
-       
-=======
-              <tbody>
-                <tr>
-                  <td>여기 지금 사람 많은 이유 아시는분</td>
-                  <th>정윤쓰</th>
-                  <th>2023-01-15</th>
-                  <th>123</th>
-                  <th>5</th>
-                </tr>
-
-                <tr>
-                  <td>강남점 오늘 자바 스터디 같이 하실분</td>
-                  <th>수진쓰</th>
-                  <th>2023-01-05</th>
-                  <th></th>
-                  <th></th>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <!-- 공백 -->
-          <div class="none"></div>
-        </section>
->>>>>>> 115d1198769668e89a6418b13b3ef1f4b3e569d1:html/All-board.html
+    
       </section>
     </main>
     <!-- 푸터 -->

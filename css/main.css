@@ -31,7 +31,7 @@ header > section:nth-child(1) {
 }
 
 #home-logo {
-  width: 120px;
+  width: 150px;
   height: 120px;
 }
 
@@ -45,6 +45,7 @@ header > section:nth-child(2) {
 
 .search-area {
   width: 600px;
+  padding-left: 50px;
 }
 
 .search-area fieldset {
@@ -175,32 +176,7 @@ nav ul li table td {
 
 .right-body {
   flex-basis: 80%;
-  border: 1px solid #55710f;
-}
-
-/* ----------------- 해시태그----------------- */
-.hashtag {
-  display: flex;
-}
-
-.hashtag ul {
-  display: flex;
-  list-style: none;
-}
-.right-body {
   border: none;
-}
-
-.right-body article:first-of-type {
-  color: black;
-  justify-content: center;
-}
-
-.hashtag a {
-  padding-right: 40px;
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
 }
 
 /* ----------------- 푸터----------------- */

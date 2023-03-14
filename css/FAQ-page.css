@@ -184,15 +184,15 @@ nav ul li table td {
   display: flex;
   color: #55710f;
   padding-top: 50px;
-  margin-left: 100px;
+  margin-left: 180px;
 
 }
 
 .FAQ-search-fieldset {
   border: 2px solid #55710f;
   border-radius: 20px;
-  width: 500px;
-  margin-left: 100px;
+  width: 600px;
+  margin-left: 180px;
   padding: 2px;
 
   display: flex;

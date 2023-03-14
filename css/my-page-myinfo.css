@@ -8,11 +8,9 @@
 }
 
 .right-body > h3 {
-  padding: 5px 15px 15px 10px;
+  padding-left: 20px;
 
   flex-basis: 15px;
-
-  border-bottom: 1px solid black;
 }
 
 .myPage-box {
@@ -36,7 +34,7 @@
   padding: 10px;
 }
 
-#box-body {
+#myPage-content {
   height: 700px;
   flex-basis: 70%;
 

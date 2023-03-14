@@ -11,6 +11,19 @@ main {
     width: 1140px;
     margin: auto;
 }
+
+.confirm{
+    color : green;
+    font-size: x-small;
+    font-weight: bold;
+}
+
+.error{
+    color: red;
+    font-size: x-small;
+    font-weight: bold;
+
+}
   
 /************헤더 부분 시작***********/
 header {
@@ -70,22 +83,6 @@ header > section:nth-child(1) {
     border:0;
 }
 
-#id-check-btn{
-    background-color: #55710F;
-    color:white;
-    border-radius: 5px;
-    border: solid #55710F;
-    cursor: pointer;
-}
-
-#nickname-check-btn{
-    background-color: #55710F;
-    color:white;
-    border-radius: 5px;
-    border: solid #55710F;
-    cursor: pointer;
-}
-
 #email-check-btn{
     background-color: #55710F;
     color:white;
@@ -94,6 +91,10 @@ header > section:nth-child(1) {
     width: 70px;
     cursor: pointer;
 }
+
+
+
+
 
 
 

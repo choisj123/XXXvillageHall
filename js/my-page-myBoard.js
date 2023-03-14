@@ -46,74 +46,100 @@ mypage.addEventListener("click", function(){
 
 
 // 페이징용 js
-const postsList = document.querySelector('.posts-list');
-const pagination = document.querySelector('.pagination');
-let currentPage = 1;
-let totalPages = 1;
-const postsPerPage = 2;
+const rowsPerPage = 3;
+  let currentPage = 1;
 
-function showPage(pageNumber) {
-  const startIndex = (pageNumber - 1) * postsPerPage;
-  const endIndex = startIndex + postsPerPage;
-  const posts = postsList.children;
+  const table = querySelectorAll(".contentTable");
+  const rowCount = table.tBodies[0].rows.length;
+  const pageCount = Math.ceil(rowCount / rowsPerPage);
 
-  for (let i = 0; i < posts.length; i++) {
-    const post = posts[i];
-    if (i >= startIndex && i < endIndex) {
-      post.style.display = 'table-row';
-    } else {
-      post.style.display = 'none';
-    }
-  }
-}
+  const paginationContainer = document.createElement("div");
 
-function updatePagination() {
-  const newTotalPosts = postsList.children.length;
-  const newTotalPages = Math.ceil(newTotalPosts / postsPerPage);
-
-  if (newTotalPages > totalPages) {
-    for (let i = totalPages + 1; i <= newTotalPages; i++) {
-      const pageButton = document.createElement('button');
-      pageButton.classList.add('page-link');
-      pageButton.textContent = i;
-      pagination.appendChild(pageButton);
-    }
-  } else if (newTotalPages < totalPages) {
-    const pageLinks = pagination.querySelectorAll('button');
-    for (let i = totalPages - 1; i >= newTotalPages; i--) {
-      const pageButton = pageLinks[i];
-      pageButton.parentNode.removeChild(pageButton);
-    }
+  for (let i = 1; i <= pageCount; i++) {
+    const pageLink = document.createElement("a");
+    pageLink.href = "#";
+    pageLink.innerText = i;
+    paginationContainer.appendChild(pageLink);
   }
 
-  totalPages = newTotalPages;
-}
+  const pageLinks = paginationContainer.querySelectorAll("a");
 
-function setActivePage() {
-  const pageLinks = pagination.querySelectorAll('button');
-  for (let i = 0; i < pageLinks.length; i++) {
-    const pageButton = pageLinks[i];
-    const pageNumber = parseInt(pageButton.textContent);
-    if (pageNumber === currentPage) {
-      pageButton.classList.add('active');
-    } else {
-      pageButton.classList.remove('active');
+  function setCurrentPage(page) {
+    currentPage = page;
+    updateTable();
+    highlightCurrentPage();
+  }
+
+  function highlightCurrentPage() {
+    pageLinks.forEach(link => {
+      link.classList.remove("active");
+      if (+link.innerText === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  }
+
+  function updateTable() {
+    const start = (currentPage - 1) * rowsPerPage;
+    const end = start + rowsPerPage;
+    table.tBodies[0].rows.forEach((row, index) => {
+      row.style.display = (index >= start && index < end) ? "" : "none";
+    });
+  }
+  
+  highlightCurrentPage();
+  
+  pageLinks.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      setCurrentPage(+e.target.innerText);
+    });
+  });
+  
+  // 이전 페이지, 다음 페이지 이동 버튼 생성
+  const prevButton = document.createElement("button");
+  prevButton.innerText = "Prev";
+  prevButton.addEventListener("click", e => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
     }
+  });
+  
+  const nextButton = document.createElement("button");
+  nextButton.innerText = "Next";
+  nextButton.addEventListener("click", e => {
+    if (currentPage < pageCount) {
+      setCurrentPage(currentPage + 1);
+    }
+  });
+  
+  // 페이지 링크와 이동 버튼을 페이지네이션 컨테이너에 추가
+  paginationContainer.insertBefore(prevButton, pageLinks[0]);
+  paginationContainer.appendChild(nextButton);
+  
+  // 페이지네이션 컨테이너를 테이블 아래에 추가
+  table.parentNode.insertBefore(paginationContainer, table.nextSibling);
+
+  // 이전 페이지, 다음 페이지 이동 버튼 생성
+const prevButton = document.createElement("button");
+prevButton.innerText = "Prev";
+prevButton.addEventListener("click", e => {
+  if (currentPage > 1) {
+    setCurrentPage(currentPage - 1);
   }
-}
+});
 
-function showActivePage(event) {
-  const pageButton = event.target;
-  const pageNumber = parseInt(pageButton.textContent);
-  if (pageNumber !== currentPage) {
-    currentPage = pageNumber;
-    showPage(currentPage);
-    setActivePage();
+const nextButton = document.createElement("button");
+nextButton.innerText = "Next";
+nextButton.addEventListener("click", e => {
+  if (currentPage < pageCount) {
+    setCurrentPage(currentPage + 1);
   }
-}
+});
 
-pagination.addEventListener('click', showActivePage);
+// 페이지 링크와 이동 버튼을 페이지네이션 컨테이너에 추가
+paginationContainer.insertBefore(prevButton, pageLinks[0]);
+paginationContainer.appendChild(nextButton);
 
-showPage(currentPage);
-updatePagination();
-setActivePage();
+// 페이지네이션 컨테이너를 테이블 아래에 추가
+table.parentNode.insertBefore(paginationContainer, table.nextSibling);

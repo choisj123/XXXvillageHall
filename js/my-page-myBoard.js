@@ -46,74 +46,96 @@ mypage.addEventListener("click", function(){
 
 
 // 페이징용 js
-const postsList = document.querySelector('.posts-list');
-const pagination = document.querySelector('.pagination');
+const tbody = document.querySelector('.posts-list');
+const rowsPerPage = 4;
 let currentPage = 1;
-let totalPages = 1;
-const postsPerPage = 2;
+let totalPages;
+const maxPagesToShow = 5;
 
-function showPage(pageNumber) {
-  const startIndex = (pageNumber - 1) * postsPerPage;
-  const endIndex = startIndex + postsPerPage;
-  const posts = postsList.children;
+function showRows() {
+  const rows = tbody.rows;
+  const startIndex = (currentPage - 1) * rowsPerPage;
+  const endIndex = startIndex + rowsPerPage;
 
-  for (let i = 0; i < posts.length; i++) {
-    const post = posts[i];
+  for (let i = 0; i < rows.length; i++) {
     if (i >= startIndex && i < endIndex) {
-      post.style.display = 'table-row';
+      rows[i].style.display = '';
     } else {
-      post.style.display = 'none';
+      rows[i].style.display = 'none';
     }
   }
 }
 
-function updatePagination() {
-  const newTotalPosts = postsList.children.length;
-  const newTotalPages = Math.ceil(newTotalPosts / postsPerPage);
+function createPages() {
+  totalPages = Math.ceil(tbody.rows.length / rowsPerPage);
 
-  if (newTotalPages > totalPages) {
-    for (let i = totalPages + 1; i <= newTotalPages; i++) {
-      const pageButton = document.createElement('button');
-      pageButton.classList.add('page-link');
-      pageButton.textContent = i;
-      pagination.appendChild(pageButton);
+  const pagesDiv = document.querySelector('#pages');
+  const prevButton = document.createElement('button');
+  prevButton.innerHTML = 'prev';
+  prevButton.disabled = currentPage === 1;
+  prevButton.addEventListener('click', function() {
+    if (currentPage > 1) {
+      currentPage--;
+      showRows();
+      updatePaging();
     }
-  } else if (newTotalPages < totalPages) {
-    const pageLinks = pagination.querySelectorAll('button');
-    for (let i = totalPages - 1; i >= newTotalPages; i--) {
-      const pageButton = pageLinks[i];
-      pageButton.parentNode.removeChild(pageButton);
-    }
-  }
+  });
+  pagesDiv.appendChild(prevButton);
 
-  totalPages = newTotalPages;
-}
+  const pageButtons = document.createDocumentFragment();
 
-function setActivePage() {
-  const pageLinks = pagination.querySelectorAll('button');
-  for (let i = 0; i < pageLinks.length; i++) {
-    const pageButton = pageLinks[i];
-    const pageNumber = parseInt(pageButton.textContent);
-    if (pageNumber === currentPage) {
-      pageButton.classList.add('active');
+  let startPage, endPage;
+  if (totalPages <= maxPagesToShow) {
+    startPage = 1;
+    endPage = totalPages;
+  } else {
+    const maxPagesBeforeCurrentPage = Math.floor(maxPagesToShow / 2);
+    const maxPagesAfterCurrentPage = Math.ceil(maxPagesToShow / 2) - 1;
+
+    if (currentPage <= maxPagesBeforeCurrentPage) {
+      startPage = 1;
+      endPage = maxPagesToShow;
+    } else if (currentPage + maxPagesAfterCurrentPage >= totalPages) {
+      startPage = totalPages - maxPagesToShow + 1;
+      endPage = totalPages;
     } else {
-      pageButton.classList.remove('active');
+      startPage = currentPage - maxPagesBeforeCurrentPage;
+      endPage = currentPage + maxPagesAfterCurrentPage;
     }
   }
-}
 
-function showActivePage(event) {
-  const pageButton = event.target;
-  const pageNumber = parseInt(pageButton.textContent);
-  if (pageNumber !== currentPage) {
-    currentPage = pageNumber;
-    showPage(currentPage);
-    setActivePage();
+  for (let i = startPage; i <= endPage; i++) {
+    const pageButton = document.createElement('button');
+    pageButton.innerHTML = i;
+    pageButton.disabled = i === currentPage;
+    pageButton.addEventListener('click', function() {
+      currentPage = i;
+      showRows();
+      updatePaging();
+    });
+    pageButtons.appendChild(pageButton);
   }
+
+  pagesDiv.appendChild(pageButtons);
+
+  const nextButton = document.createElement('button');
+  nextButton.innerHTML = 'next';
+  nextButton.disabled = currentPage === totalPages;
+  nextButton.addEventListener('click', function() {
+    if (currentPage < totalPages) {
+      currentPage++;
+      showRows();
+      updatePaging();
+    }
+  });
+  pagesDiv.appendChild(nextButton);
 }
 
-pagination.addEventListener('click', showActivePage);
+function updatePaging() {
+  const pagesDiv = document.querySelector('#pages');
+  pagesDiv.innerHTML = '';
+  createPages();
+}
 
-showPage(currentPage);
-updatePagination();
-setActivePage();
+showRows();
+createPages();

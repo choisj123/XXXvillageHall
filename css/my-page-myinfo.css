@@ -30,7 +30,7 @@
 .myPage-box > div:first-child {
   flex-basis: 15%;
 
-  border: 1px solid black;
+  border: 1px solid #55710f;
   font-weight: bold;
 
   padding: 10px;
@@ -40,7 +40,7 @@
   height: 700px;
   flex-basis: 70%;
 
-  border: 1px solid black;
+  border: 1px solid #55710f;
   text-align: center;
   padding-top: 80px;
 }

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/my-page-myinfo.css" />
     <script
       type="text/javascript"
@@ -52,14 +53,15 @@
           </article>
         </section>
 
-        <!-- 로그인 / 회원가입 -->
-        <section class="login-signup-area">
+        <!-- 회원이름 / 로그아웃 -->
+        <section class="logout-area">
+          <span id="user-name">홍길동님</span>&nbsp;&nbsp;
           <div>
             <!-- 자물쇠 아이콘 -->
-            <a href="#" id="login" class="fa-solid fa-lock">&nbsp;로그인</a>
+            <a href="#" id="logout" class="fa-solid fa-unlock"
+              >&nbsp;로그아웃</a
+            >
           </div>
-
-          <a href="#" id="signup">회원가입</a>
         </section>
       </header>
 
@@ -67,9 +69,13 @@
       <section class="body">
         <section class="left-body">
           <article>
-            <!-- 프로필 이미지 + 로그인 -->
-            <img src="/src/profile.png" /><br />
-            <a href="#" id="body-login"> 로그인</a>
+            <!-- 프로필 이미지 + 내정보수정 + 내글댓글좋아요 -->
+            <img src="../src/profile.png" /><br />
+            <span id="left-user-name"><strong>홍길동님</strong></span>
+            <span
+              ><a href="#" id="update">내 정보 수정</a> |
+              <a href="#" id="selectMyBoard"> 내 글 목록</a></span
+            >
           </article>
 
           <!-- 네비 (메뉴바)-->
@@ -95,34 +101,24 @@
                 <i class="fa-regular fa-circle-question" id="nav-faq"></i>
                 <a href="#">FAQ</a>
               </li>
-              <li>
-                <i class="fa-solid fa-gear" id="nav-mypage"></i>
-                <a href="#" id="mypage">마이페이지</a>
-                <ul id="sub-menu" style="display: none">
-                  <li>
-                    <a href="#">내 정보 수정</a>
-                  </li>
-                  <li>
-                    <a href="#">내 게시글 수정</a>
-                  </li>
-                </ul>
-              </li>
             </ul>
           </nav>
         </section>
 
         <!-- 메인 콘텐츠 -->
         <section class="right-body">
-          <h3>마이페이지</h3>
+          <h2>마이페이지</h2>
+          <hr />
           <div class="myPage-box">
             <div>내 정보 수정</div>
             <form action="#" method="post">
-              <div id="box-body">
+              <div id="myPage-content">
                 <table>
                   <tr>
                     <td>
                       <tr colspan="3">
-                        <input type="image" />
+                        <label for="profile-image">프로필 사진 변경</label>
+                        <input type="image" id="profile-image" />
                         <br />
                       </tr>
                     </td>
@@ -138,20 +134,6 @@
                       <input type="text" />
                     </td>
                     <td><button type="submit">중복 확인</button><br /></td>
-                  </tr>
-                  <tr>
-                    <td>이메일</td>
-                    <td>
-                      <input type="email" />
-                    </td>
-                    <td><button type="submit">인증번호</button><br /></td>
-                  </tr>
-                  <tr>
-                    <td>이메일 코드</td>
-                    <td>
-                      <input type="text" />
-                    </td>
-                    <td><button type="submit">확인</button><br /></td>
                   </tr>
                   <tr>
                     <td>비밀번호</td>

@@ -177,6 +177,8 @@ nav ul li table td {
 .right-body {
   flex-basis: 80%;
   border: none;
+
+  padding: 15px 0px 0px 20px;
 }
 
 /* ----------------- 푸터----------------- */

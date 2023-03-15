@@ -1,0 +1,14 @@
+#title {
+  border: 1px solid gray;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+button {
+  cursor: pointer;
+  background-color: #55710f;
+  border-radius: 3px;
+  color: white;
+  font-size: 15px;
+  padding: 5px 10px 5px 10px;
+}

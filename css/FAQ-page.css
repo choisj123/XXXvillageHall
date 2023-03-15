@@ -230,10 +230,10 @@ nav ul li table td {
 }
 .category {
   display: block;
-  border: 2px solid #ddd;
+  border: 2px solid white;
   border-radius: 10px;
   margin-right: 10px;
-  width: 110px;
+  width: 130px;
   height: 50px;
   padding: 10px;
   text-align: center;
@@ -243,14 +243,14 @@ nav ul li table td {
   font-weight: bold;
 }
 
-
-
 .category-article a:hover{
   color: white;
   background-color: #55710f;
-  transition: 0.5s;
+  transition: 0.7s;
 }
-
+#logIn{
+  display: block;
+}
 .FAQ-board {
   width: 100%;
   height: 100%;
@@ -262,6 +262,7 @@ nav ul li table td {
   list-style: none;
   text-align: center;
   justify-content: space-between;
+  display: none;
 }
   
 .FAQ-container {

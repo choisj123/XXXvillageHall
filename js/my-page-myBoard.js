@@ -29,117 +29,50 @@ tabButtons.forEach(function(button) {
   });
 });
 
-
-// 마이페이지 텝
-const mypage = document.getElementById("mypage")
-mypage.addEventListener("click", function(){
-    const subMenu = document.getElementById("sub-menu");
-
-    if(subMenu.style.display == 'none'){
-       subMenu.style.display = "block";
-
-    }else{
-        subMenu.style.display = "none";
-    }
-    
-});
-
-
 // 페이징용 js
-const rowsPerPage = 3;
-  let currentPage = 1;
 
-  const table = querySelectorAll(".contentTable");
-  const rowCount = table.tBodies[0].rows.length;
-  const pageCount = Math.ceil(rowCount / rowsPerPage);
-
-  const paginationContainer = document.createElement("div");
-
-  for (let i = 1; i <= pageCount; i++) {
-    const pageLink = document.createElement("a");
-    pageLink.href = "#";
-    pageLink.innerText = i;
-    paginationContainer.appendChild(pageLink);
-  }
-
-  const pageLinks = paginationContainer.querySelectorAll("a");
-
-  function setCurrentPage(page) {
-    currentPage = page;
-    updateTable();
-    highlightCurrentPage();
-  }
-
-  function highlightCurrentPage() {
-    pageLinks.forEach(link => {
-      link.classList.remove("active");
-      if (+link.innerText === currentPage) {
-        link.classList.add("active");
-      }
-    });
-  }
-
-  function updateTable() {
-    const start = (currentPage - 1) * rowsPerPage;
-    const end = start + rowsPerPage;
-    table.tBodies[0].rows.forEach((row, index) => {
-      row.style.display = (index >= start && index < end) ? "" : "none";
-    });
-  }
-  
-  highlightCurrentPage();
-  
-  pageLinks.forEach(link => {
-    link.addEventListener("click", e => {
-      e.preventDefault();
-      setCurrentPage(+e.target.innerText);
-    });
-  });
-  
-  // 이전 페이지, 다음 페이지 이동 버튼 생성
-  const prevButton = document.createElement("button");
-  prevButton.innerText = "Prev";
-  prevButton.addEventListener("click", e => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
+// 페이지 버튼 생성
+function generatePageButtons(totalPages, currentPage) {
+  let startPage, endPage;
+  if (totalPages <= 5) { // 1,2,3,4,5 페이지(적으면 그만큼만)
+    startPage = 1;
+    endPage = totalPages;
+  } else {
+    if (currentPage <= 3) { // 1,2,3페이지일경우
+      startPage = 1;
+      endPage = 5;
+    } else if (currentPage + 1 >= totalPages) { // 현재페이지가 마지막 페이지일경우
+      startPage = totalPages - 4;
+      endPage = totalPages;
+    } else { // 그냥 중간이면 앞뒤로 2페이지씩
+      startPage = currentPage - 2;
+      endPage = currentPage + 2; 
     }
-  });
-  
-  const nextButton = document.createElement("button");
-  nextButton.innerText = "Next";
-  nextButton.addEventListener("click", e => {
-    if (currentPage < pageCount) {
-      setCurrentPage(currentPage + 1);
+  }
+
+  let pageButtons = '';
+  for (let i = startPage; i <= endPage; i++) {
+    if (i == currentPage) {
+      pageButtons += `<button class="active">${i}</button>`;
+    } else {
+      pageButtons += `<button onclick="goToPage(${i})">${i}</button>`;
     }
-  });
-  
-  // 페이지 링크와 이동 버튼을 페이지네이션 컨테이너에 추가
-  paginationContainer.insertBefore(prevButton, pageLinks[0]);
-  paginationContainer.appendChild(nextButton);
-  
-  // 페이지네이션 컨테이너를 테이블 아래에 추가
-  table.parentNode.insertBefore(paginationContainer, table.nextSibling);
-
-  // 이전 페이지, 다음 페이지 이동 버튼 생성
-const prevButton = document.createElement("button");
-prevButton.innerText = "Prev";
-prevButton.addEventListener("click", e => {
-  if (currentPage > 1) {
-    setCurrentPage(currentPage - 1);
   }
-});
+  document.getElementById('pagination').innerHTML = pageButtons;
+}
 
-const nextButton = document.createElement("button");
-nextButton.innerText = "Next";
-nextButton.addEventListener("click", e => {
-  if (currentPage < pageCount) {
-    setCurrentPage(currentPage + 1);
-  }
-});
+// 총 게시글 갯수
+const content = document.getElementById("content");
+let totalContentCount = content.rows.length;
 
-// 페이지 링크와 이동 버튼을 페이지네이션 컨테이너에 추가
-paginationContainer.insertBefore(prevButton, pageLinks[0]);
-paginationContainer.appendChild(nextButton);
+// 한페이지당 제한 게시글 수
+const contentPerPage = 10;
 
-// 페이지네이션 컨테이너를 테이블 아래에 추가
-table.parentNode.insertBefore(paginationContainer, table.nextSibling);
+// 총페이지 갯수
+let totalPages = Math.ceil(totalContentCount / contentPerPage);
+
+// 현재 페이지 그룹 계산
+const maxPageButton = 5; 
+
+// 현재페이지 (시작 = 1)
+let page = 1;

@@ -3,6 +3,7 @@
         //data로 할일...
     });
     */
+
     $.getJSON //api 키값
     ('http://api.openweathermap.org/data/2.5/weather?id=1835848&appid=7401ee2987d021037ece4c98b2baf927&units=metric&lang=kr',function(data){
         //data로 할일...
@@ -46,3 +47,4 @@
         aqi.innerText = "안좋음";
         } 
     });
+

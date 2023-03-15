@@ -128,7 +128,7 @@ header > section:nth-child(1) {
   background-color: rgb(240, 244, 240);
   width: 355px;
   border-radius: 5px;
-  color: #ffffff;
+  color:green;
   font-size: xx-small;
   display: none;
 }

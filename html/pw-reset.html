@@ -41,18 +41,28 @@
                 <div class="div1">회원정보에 등록한 이메일로 인증</div>
 
                 <!--이메일-->
-                이메일<br><input type="email" name="email" class="input-text">
+                이메일<br><input type="email" name="email" class="input-text" placeholder="이메일(아이디)">
                 <button id="email-check-btn">인증</button><br><br>
 
                 <!--이메일 인증번호 확인--> 
-                이메일 인증<br><input type="text" name="auth_number" class="input-text">
+                이메일 인증<br><input type="text" name="auth_number" class="input-text" placeholder="인증 번호 6자리 숫자">
                 <button id="email-check-btn">확인</button><br>
 
                 <!--인증번호가 나오지 않나요?-->
                 <div class="div2">인증 번호가 나오지 않나요?</div>
                 <div class="div3"> 발송한 메일이 스팸 메일로 분류된 것은 아닌지
-                    확인해 주세요.<br> 스팸 메일함에도 메일이 없다면, 다시 한 번 '인증번호 받기'를 눌러주세요. </div>
+                    확인해 주세요.<br> 스팸 메일함에도 메일이 없다면, 다시 한 번 '인증번호 받기'를 눌러주세요. </div><br>
 
+               <!-- 새로운 비밀번호를 입력해주세요-->
+              
+               새로운 비밀번호를 입력해주세요.<br>
+               
+               <input type="password" class="input-text" id="pw1" placeholder="새 비밀번호 입력"><br>
+               <span id="result1"></span>
+
+               <input type="password" class="input-text" id="pw2" placeholder="새 비밀번호 확인"><br>
+               <span id="result2"></span><br> 
+               <button type="submit" id="pw-resetBtn">비밀번호 재설정</button>   
              
               
 
@@ -62,6 +72,8 @@
         </form>
       </section>
     </main>
+
+    <script src="../js/pw-reset.js"></script>
 
     <!-- 푸터 -->
     <footer>

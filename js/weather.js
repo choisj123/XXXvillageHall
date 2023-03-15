@@ -1,20 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather</title>
-    <meta charset="utf-8">
-    <script src="http://code.jquery.com/jquery-1.7.min.js" ></script>
-    <link rel="stylesheet" href="/css/weather.css">
-</head>
-<script>
     /*
     $.getJson('파일경로',function(data){
         //data로 할일...
     });
     */
+
     $.getJSON //api 키값
     ('http://api.openweathermap.org/data/2.5/weather?id=1835848&appid=7401ee2987d021037ece4c98b2baf927&units=metric&lang=kr',function(data){
         //data로 할일...
@@ -47,33 +36,15 @@
 
         const aqi = document.querySelector(".aqi");
         if($aqi == 1){
-        aqi.innerText = "미세먼지 : 매우 좋음";
+        aqi.innerText = "매우 좋음";
         } else if($aqi == 2){
-        aqi.innerText = "미세먼지 : 좋음"
+        aqi.innerText = "좋음"
         } else if($aqi == 3){
-        aqi.innerText = "미세먼지 : 보통";
+        aqi.innerText = "보통";
         } else if($aqi == 4){
-        aqi.innerText = "미세먼지 : 나쁨";
+        aqi.innerText = "나쁨";
         } else if($aqi == 5){
-        aqi.innerText = "미세먼지 : 안좋음";
+        aqi.innerText = "안좋음";
         } 
-       
-
-      
     });
 
-</script>
-<body>
-    <div class="box">
-    <h1 class="date"></h1>
-    <div class="head">서울
-        <div class="cicon"></div>
-        <div class="description"></div> 
-        <div class="ctemp">현재 기온: </div>
-        <div class="clowtemp">최저 기온: </div>
-        <div class="humidity">습도 : </div>
-        <div class="aqi"></div>
-    </div>
-    </div>
-</body>
-</html>

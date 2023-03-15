@@ -228,22 +228,37 @@ nav ul li table td {
   margin-left:50px;
   display: flex;
 }
-
 .category {
+  display: block;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  margin-right: 10px;
+  width: 110px;
+  height: 50px;
+  padding: 10px;
+  text-align: center;
   font-size: large;
   text-decoration: none;
   color: #55710f;
   font-weight: bold;
-  padding: 10px;
+}
+
+
+
+.category-article a:hover{
+  color: white;
+  background-color: #55710f;
+  transition: 0.5s;
 }
 
 .FAQ-board {
   width: 100%;
   height: 100%;
+  border-radius: 5px;
   padding: 6px 12px;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-left: 50px;
-  border: 1px solid rgb(6, 6, 6);
+  border: 2px solid #55710f;
   list-style: none;
   text-align: center;
   justify-content: space-between;
@@ -261,6 +276,12 @@ nav ul li table td {
   list-style: none;
   justify-content: space-between;
 }
+
+.FAQ-board :nth-of-type(1){
+  font-weight: bold;
+  font-size: 15px;
+}
+
 
 .FAQ-board ul :nth-of-type(1){
   flex-basis: 15%;
@@ -296,7 +317,7 @@ footer {
   align-content: center;
   text-align: center;
   padding-top: 30px;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 
 footer p {

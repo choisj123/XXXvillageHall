@@ -105,8 +105,8 @@ header > section:nth-child(1) {
     width: 300px;
     height: 45px;
     font-size: large;
-    background-color: #55710f;
-    color: white;
+    background-color: lightgray;
+    color: gray;
     border: 0;
     border-radius: 10px;
 

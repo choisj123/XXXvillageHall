@@ -14,15 +14,12 @@ main {
 
 .confirm{
     color : green;
-    font-size: x-small;
-    font-weight: bold;
+    font-size: x-small;   
 }
 
 .error{
     color: red;
     font-size: x-small;
-    font-weight: bold;
-
 }
   
 /************헤더 부분 시작***********/

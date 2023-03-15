@@ -44,24 +44,24 @@
                     <fieldset id="sign-up-area">
 
                         <section class="sign-up-1">
-                            <!--아이디-->
-                            아이디<br><input type="text" name="inputId" class="input-text">
-                            <button id="id-check-btn">중복 확인</button><br><br>
-                            
-                            <!--비밀번호-->
-                            비밀번호<br><input type="password" input name="password" class="input-text"><br><br>
-                            비밀번호 확인<br><input type="password" input name="password-check" class="input-text"><br><br>
-                            
-                            <!--닉네임-->
-                            닉네임<br><input type="text" name="Nickname" class="input-text">
-                            <button id="nickname-check-btn">중복 확인</button><br><br>
-                            <!--연락처-->
-                            연락처<br><input type="tel" name="tel" class="input-text" ><br><br>
-                            
-                            <!--이메일-->
+
+                            <!--이메일--> 
                             이메일<br><input type="email" name="email" class="input-text">
                             <button id="email-check-btn">인증</button><br><br>
 
+                             <!--이메일 인증번호 확인--> 
+                             이메일 인증<br><input type="text" name="auth_number" class="input-text">
+                             <button id="email-check-btn">확인</button><br><br>
+
+                            <!--비밀번호-->
+                            비밀번호<br><input type="password" input name="password" id="pw1" class="input-text"><br>
+                                    <span id = "result1" class="confirm"></span><br><br>
+                            비밀번호 확인<br><input type="password" input name="password-check" id="pw2" class="input-text"><br>
+                                    <span id = "result2" class="confirm"></span><br><br>
+                            <!--닉네임-->
+                            닉네임<br><input type="text" name="Nickname" class="input-text">
+                            <br><br><br>
+            
                             <!--프로필사진-->
                             프로필사진<br>
                             <input type="file" name="profile-pic">
@@ -94,8 +94,9 @@
 
                 </form>
 
+            </section>
 
-                <script src="/js/kakao-start.js"></script>
+         <script src="/js/sign-up-page.js"></script>
 
 </body>
         

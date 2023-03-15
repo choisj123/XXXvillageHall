@@ -5,19 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/main-page.css" />
-    <script>
-      type = "text/javascript";
-      src =
-        "//dapi.kakao.com/v2/maps/sdk.js?appkey=af34b09f8f2cdee07cf990ab549e6220";
-    </script>
-    <script>
-      type = "text/javascript";
-      src =
-        "//dapi.kakao.com/v2/maps/sdk.js?appkey=af34b09f8f2cdee07cf990ab549e6220&libraries=LIBRARY";
-    </script>
+    <script src="http://code.jquery.com/jquery-1.7.min.js"></script>
 
+    <link rel="stylesheet" href="/css/main.css" />
+    <link reㅎl="stylesheet" href="/css/main-page.css" />
+    <link rel="stylesheet" href="/css/weather.css" />
+
+    <!-- 정훈씨꺼 지도 api key -->
     <script
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=196b8c346b121bd08b2a475bfa001dd0"
@@ -27,19 +21,7 @@
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=196b8c346b121bd08b2a475bfa001dd0&libraries=LIBRARY"
     ></script>
 
-    <script>
-      src = "https://kit.fontawesome.com/2f1bf0eac7.js";
-      crossorigin = "anonymous";
-    </script>
-
-    <script
-      type="text/javascript"
-      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=af34b09f8f2cdee07cf990ab549e6220"
-    ></script>
-    <script
-      type="text/javascript"
-      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=af34b09f8f2cdee07cf990ab549e6220&libraries=LIBRARY"
-    ></script>
+    <!-- fontawesome -->
     <script
       src="https://kit.fontawesome.com/2f1bf0eac7.js"
       crossorigin="anonymous"
@@ -132,36 +114,20 @@
 
         <!-- 메인 콘텐츠 -->
         <section class="right-body">
-          <!-- 태그 -->
-          <article class="hashtag">
-            <ul>
-              <li><a href="#"> #이슈 </a></li>
-              <li><a href="#"> #맛집 </a></li>
-              <li><a href="#"> #취미 </a></li>
-              <li><a href="#"> #친목 </a></li>
-              <li><a href="#"> #추천 </a></li>
-            </ul>
-          </article>
-
           <!-- 지도 부분 -->
-
           <section>
             <div>
               <label for="category">카테고리:</label>
               <select onchange="showMarkersByCategory(this.value)">
                 <option value="전체">전체글</option>
                 <option value="이슈">이슈</option>
-                <option value="명소">명소</option>
                 <option value="취미">취미</option>
                 <option value="친목">친목</option>
                 <option value="추천">추천</option>
               </select>
             </div>
-            <div id="map" style="width: 921px; height: 500px"></div>
+            <div id="map" style="width: auto; height: 500px"></div>
           </section>
-
-          <!-- 날짜 -->
-          <section class="date"></section>
 
           <!-- 공지+인기글 -->
           <section class="notice-fave">
@@ -175,7 +141,6 @@
                       <th>제목</th>
                       <th>조회수</th>
                     </tr>
-
                   </thead>
                   <tbody>
                     <tr>
@@ -186,103 +151,99 @@
                       </td>
                       <td><a href="#" title="사용꿀팁"> 66 </a></td>
                     </tr>
-    
-                  <tr>
-                    <td>
-                      <a href="#" title="사용꿀팁">
-                        개인정보처리방침 개정 사전안내
-                      </a>
-                    </td>
-                    <td><a href="#" title="사용꿀팁"> 66 </a></td>
-                  </tr>
-    
-                  <tr>
-                    <td>
-                      <a href="#" title="사용꿀팁">
-                        위치기반서비스방침 개정 내용 사전안내
-                      </a>
-                    </td>
-                    <td><a href="#" title="사용꿀팁"> 53 </a></td>
-                  </tr>
-    
-                  <tr>
-                    <td>
-                      <a href="#" title="사용꿀팁">
-                        서비스 점검 시간 사전 안내
-                      </a>
-                    </td>
-                    <td><a href="#" title="사용꿀팁"> 39 </a></td>
-                  </tr>
-    
-                  <tr>
-                    <td>
-                      <a href="#" title="사용꿀팁">
-                        인터넷 익스플로러(IE) 지원 종료 안내
-                      </a>
-                    </td>
-                    <td><a href="#" title="사용꿀팁"> 27 </a></td>
-                  </tr>
-    
-                  <tr>
-                    <td>
-                      <a href="#" title="사용꿀팁">
-                        5년 이상 미사용 계정 휴면처리 안내 공지
-                      </a>
-                    </td>
-                    <td><a href="#" title="사용꿀팁"> 11 </a></td>
-                  </tr>
-    
-                  <tr>
-                    <td>
-                      <a href="#" title="사용꿀팁">
-                        개인정보처리방침 개정 사전안내
-                      </a>
-                    </td>
-                    <td><a href="#" title="사용꿀팁"> 66 </a></td>
-                  </tr>
-    
-                  <tr>
-                    <td>
-                      <a href="#" title="사용꿀팁">
-                        개인정보처리방침 개정 사전안내
-                      </a>
-                    </td>
-                    <td><a href="#" title="사용꿀팁"> 66 </a></td>
-                  </tr>
-                  
-                  <tr>
-                    <td>
-                      <a href="#" title="사용꿀팁">
-                        위치기반서비스방침 개정 내용 사전안내
-                      </a>
-                    </td>
-                    <td><a href="#" title="사용꿀팁"> 53 </a></td>
-                  </tr>
-    
-                  <tr>
-                    <td>
-                      <a href="#" title="사용꿀팁">
-                        서비스 점검 시간 사전 안내
-                      </a>
-                    </td>
-                    <td><a href="#" title="사용꿀팁"> 39 </a></td>
-                  </tr>
-    
-                  <tr>
-                    <td>
-                      <a href="#" title="사용꿀팁">
-                        인터넷 익스플로러(IE) 지원 종료 안내
-                      </a>
-                    </td>
-                    <td><a href="#" title="사용꿀팁"> 27 </a></td>
-                  </tr>
 
+                    <tr>
+                      <td>
+                        <a href="#" title="사용꿀팁">
+                          개인정보처리방침 개정 사전안내
+                        </a>
+                      </td>
+                      <td><a href="#" title="사용꿀팁"> 66 </a></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <a href="#" title="사용꿀팁">
+                          위치기반서비스방침 개정 내용 사전안내
+                        </a>
+                      </td>
+                      <td><a href="#" title="사용꿀팁"> 53 </a></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <a href="#" title="사용꿀팁">
+                          서비스 점검 시간 사전 안내
+                        </a>
+                      </td>
+                      <td><a href="#" title="사용꿀팁"> 39 </a></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <a href="#" title="사용꿀팁">
+                          인터넷 익스플로러(IE) 지원 종료 안내
+                        </a>
+                      </td>
+                      <td><a href="#" title="사용꿀팁"> 27 </a></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <a href="#" title="사용꿀팁">
+                          5년 이상 미사용 계정 휴면처리 안내 공지
+                        </a>
+                      </td>
+                      <td><a href="#" title="사용꿀팁"> 11 </a></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <a href="#" title="사용꿀팁">
+                          개인정보처리방침 개정 사전안내
+                        </a>
+                      </td>
+                      <td><a href="#" title="사용꿀팁"> 66 </a></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <a href="#" title="사용꿀팁">
+                          개인정보처리방침 개정 사전안내
+                        </a>
+                      </td>
+                      <td><a href="#" title="사용꿀팁"> 66 </a></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <a href="#" title="사용꿀팁">
+                          위치기반서비스방침 개정 내용 사전안내
+                        </a>
+                      </td>
+                      <td><a href="#" title="사용꿀팁"> 53 </a></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <a href="#" title="사용꿀팁">
+                          서비스 점검 시간 사전 안내
+                        </a>
+                      </td>
+                      <td><a href="#" title="사용꿀팁"> 39 </a></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <a href="#" title="사용꿀팁">
+                          인터넷 익스플로러(IE) 지원 종료 안내
+                        </a>
+                      </td>
+                      <td><a href="#" title="사용꿀팁"> 27 </a></td>
+                    </tr>
                   </tbody>
-
                 </table>
-
               </div>
-
             </div>
             <!-- 인기글 -->
             <div class="fave-box">
@@ -294,7 +255,6 @@
                       <th>제목</th>
                       <th>조회수</th>
                     </tr>
-
                   </thead>
                   <tbody>
                     <tr>
@@ -305,108 +265,124 @@
                       </td>
                       <td><a href="#" title="사용꿀팁"> 66 </a></td>
                     </tr>
-    
-                  <tr>
-                    <td>
-                      <a href="#" title="사용꿀팁">
-                        개인정보처리방침 개정 사전안내
-                      </a>
-                    </td>
-                    <td><a href="#" title="사용꿀팁"> 66 </a></td>
-                  </tr>
-    
-                  <tr>
-                    <td>
-                      <a href="#" title="사용꿀팁">
-                        위치기반서비스방침 개정 내용 사전안내
-                      </a>
-                    </td>
-                    <td><a href="#" title="사용꿀팁"> 53 </a></td>
-                  </tr>
-    
-                  <tr>
-                    <td>
-                      <a href="#" title="사용꿀팁">
-                        서비스 점검 시간 사전 안내
-                      </a>
-                    </td>
-                    <td><a href="#" title="사용꿀팁"> 39 </a></td>
-                  </tr>
-    
-                  <tr>
-                    <td>
-                      <a href="#" title="사용꿀팁">
-                        인터넷 익스플로러(IE) 지원 종료 안내
-                      </a>
-                    </td>
-                    <td><a href="#" title="사용꿀팁"> 27 </a></td>
-                  </tr>
-    
-                  <tr>
-                    <td>
-                      <a href="#" title="사용꿀팁">
-                        5년 이상 미사용 계정 휴면처리 안내 공지
-                      </a>
-                    </td>
-                    <td><a href="#" title="사용꿀팁"> 11 </a></td>
-                  </tr>
-    
-                  <tr>
-                    <td>
-                      <a href="#" title="사용꿀팁">
-                        개인정보처리방침 개정 사전안내
-                      </a>
-                    </td>
-                    <td><a href="#" title="사용꿀팁"> 66 </a></td>
-                  </tr>
-    
-                  <tr>
-                    <td>
-                      <a href="#" title="사용꿀팁">
-                        개인정보처리방침 개정 사전안내
-                      </a>
-                    </td>
-                    <td><a href="#" title="사용꿀팁"> 66 </a></td>
-                  </tr>
-                  
-                  <tr>
-                    <td>
-                      <a href="#" title="사용꿀팁">
-                        위치기반서비스방침 개정 내용 사전안내
-                      </a>
-                    </td>
-                    <td><a href="#" title="사용꿀팁"> 53 </a></td>
-                  </tr>
-    
-                  <tr>
-                    <td>
-                      <a href="#" title="사용꿀팁">
-                        서비스 점검 시간 사전 안내
-                      </a>
-                    </td>
-                    <td><a href="#" title="사용꿀팁"> 39 </a></td>
-                  </tr>
-    
-                  <tr>
-                    <td>
-                      <a href="#" title="사용꿀팁">
-                        인터넷 익스플로러(IE) 지원 종료 안내
-                      </a>
-                    </td>
-                    <td><a href="#" title="사용꿀팁"> 27 </a></td>
-                  </tr>
 
+                    <tr>
+                      <td>
+                        <a href="#" title="사용꿀팁">
+                          개인정보처리방침 개정 사전안내
+                        </a>
+                      </td>
+                      <td><a href="#" title="사용꿀팁"> 66 </a></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <a href="#" title="사용꿀팁">
+                          위치기반서비스방침 개정 내용 사전안내
+                        </a>
+                      </td>
+                      <td><a href="#" title="사용꿀팁"> 53 </a></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <a href="#" title="사용꿀팁">
+                          서비스 점검 시간 사전 안내
+                        </a>
+                      </td>
+                      <td><a href="#" title="사용꿀팁"> 39 </a></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <a href="#" title="사용꿀팁">
+                          인터넷 익스플로러(IE) 지원 종료 안내
+                        </a>
+                      </td>
+                      <td><a href="#" title="사용꿀팁"> 27 </a></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <a href="#" title="사용꿀팁">
+                          5년 이상 미사용 계정 휴면처리 안내 공지
+                        </a>
+                      </td>
+                      <td><a href="#" title="사용꿀팁"> 11 </a></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <a href="#" title="사용꿀팁">
+                          개인정보처리방침 개정 사전안내
+                        </a>
+                      </td>
+                      <td><a href="#" title="사용꿀팁"> 66 </a></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <a href="#" title="사용꿀팁">
+                          개인정보처리방침 개정 사전안내
+                        </a>
+                      </td>
+                      <td><a href="#" title="사용꿀팁"> 66 </a></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <a href="#" title="사용꿀팁">
+                          위치기반서비스방침 개정 내용 사전안내
+                        </a>
+                      </td>
+                      <td><a href="#" title="사용꿀팁"> 53 </a></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <a href="#" title="사용꿀팁">
+                          서비스 점검 시간 사전 안내
+                        </a>
+                      </td>
+                      <td><a href="#" title="사용꿀팁"> 39 </a></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <a href="#" title="사용꿀팁">
+                          인터넷 익스플로러(IE) 지원 종료 안내
+                        </a>
+                      </td>
+                      <td><a href="#" title="사용꿀팁"> 27 </a></td>
+                    </tr>
                   </tbody>
-
                 </table>
-
               </div>
-              
             </div>
           </section>
+
           <!-- 날씨 -->
+          <section class="weather">
+            <div class="box">
+              <div><p>날씨</p></div>
+              <h3 class="date"></h3>
+              <div class="head">
+                <span>서울</span>
+                <div class="weather-left">
+                  <div class="cicon"></div>
+                  <div class="description"></div>
+                </div>
+
+                <div class="weather-right">
+                  <div class="ctemp">현재 기온:</div>
+                  <div class="clowtemp">최저 기온:</div>
+                  <div class="humidity">습도 :</div>
+                  <div class="aqi"></div>
+                </div>
+              </div>
+            </div>
+          </section>
         </section>
-        <section class="weather"></section>
       </section>
     </main>
 
@@ -427,6 +403,7 @@
     </footer>
 
     <script src="/js/main-page.js"></script>
+    <script src="/js/weather.js"></script>
 
     <script src="/js/main-page-Map-API.js"></script>
   </body>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비밀번호 재설정</title>
+
+    <link rel="stylesheet" href="/css/pw-reset.css" />
+
+    <script
+      src="https://kit.fontawesome.com/2f1bf0eac7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main>
+      <!--헤더 영역 시작-->
+      <header>
+        <!--로고 영역(클릭하면 메인페이지로 넘어감)-->
+        <section>
+          <a href="#">
+            <img src="/src/logo.png" id="home-logo" />
+          </a>
+        </section>
+      </header>
+      <!--헤더 영역 끝-->
+
+      <!--바디 부분 시작-->
+      <!--콘텐츠 작성 영역-->
+      <section class="content">
+        <h1 class="pw-reset-text">비밀번호 재설정</h1>
+      </section>
+
+      <section class="content-2">
+        <!--비번 찾을 때 필요한 정보 기입 영역-->
+        <form action="#" name="pw-reset-form">
+          <fieldset id="pw-reset-area">
+            <section class="pw-reset-section">
+
+                <div class="div1">회원정보에 등록한 이메일로 인증</div>
+
+                <!--이메일-->
+                이메일<br><input type="email" name="email" class="input-text" placeholder="이메일(아이디)">
+                <button id="email-check-btn">인증</button><br><br>
+
+                <!--이메일 인증번호 확인--> 
+                이메일 인증<br><input type="text" name="auth_number" class="input-text" placeholder="인증 번호 6자리 숫자">
+                <button id="email-check-btn">확인</button><br>
+
+                <!--인증번호가 나오지 않나요?-->
+                <div class="div2">인증 번호가 나오지 않나요?</div>
+                <div class="div3"> 발송한 메일이 스팸 메일로 분류된 것은 아닌지
+                    확인해 주세요.<br> 스팸 메일함에도 메일이 없다면, 다시 한 번 '인증번호 받기'를 눌러주세요. </div><br>
+
+               <!-- 새로운 비밀번호를 입력해주세요-->
+              
+               새로운 비밀번호를 입력해주세요.<br>
+               
+               <input type="password" class="input-text" id="pw1" placeholder="새 비밀번호 입력"><br>
+               <span id="result1"></span>
+
+               <input type="password" class="input-text" id="pw2" placeholder="새 비밀번호 확인"><br>
+               <span id="result2"></span><br> 
+               <button type="submit" id="pw-resetBtn">비밀번호 재설정</button>   
+             
+              
+
+             
+            </section>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <script src="../js/pw-reset.js"></script>
+
+    <!-- 푸터 -->
+    <footer>
+      <p>Copyright &copy; 2023. Villege Hall Community. All rights reserved</p>
+
+      <article>
+        <a href="#">프로젝트 소개</a>
+        <span>|</span>
+        <a href="#">이용약관</a>
+        <span>|</span>
+        <a href="#">개인정보처리방침</a>
+        <span>|</span>
+        <a href="#">고객센터</a>
+      </article>
+    </footer>
+  </body>
+</html>

@@ -4,21 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>write-page</title>
 
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/all-board.css" />
-    <link rel="stylesheet" href="/css/board.css" />
+    <link rel="stylesheet" href="/css/write-page.css" />
+
+    <!-- fontawesome -->
     <script
       src="https://kit.fontawesome.com/2f1bf0eac7.js"
       crossorigin="anonymous"
     ></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
   </head>
   <body>
     <main>
       <header>
         <!-- 클릭시 메인으로 이동하는 로고 -->
         <section>
-          <a href="#">
+          <a href="/html/main-page.html">
             <img src="/src/logo.png" id="home-logo" />
           </a>
         </section>
@@ -50,10 +63,15 @@
         <section class="login-signup-area">
           <div>
             <!-- 자물쇠 아이콘 -->
-            <a href="#" id="login" class="fa-solid fa-lock">&nbsp;로그인</a>
+            <a
+              href="/html/sign-in-page.html"
+              id="login"
+              class="fa-solid fa-lock"
+              >&nbsp;로그인</a
+            >
           </div>
 
-          <a href="#" id="signup">회원가입</a>
+          <a href="/html/sign-up-page.html" id="signup">회원가입</a>
         </section>
       </header>
 
@@ -64,30 +82,30 @@
             <!-- 이미지 + 로그인 -->
 
             <img src="../src/profile.png" /><br />
-            <a href="#" id="body-login"> 로그인</a>
+            <a href="/html/sign-in-page.html" id="body-login"> 로그인</a>
           </article>
           <!-- 네비 (메뉴바)-->
           <nav>
             <ul>
               <li>
                 <i class="fa-solid fa-house" id="nav-home"></i>
-                <a href="#">홈</a>
+                <a href="/html/main-page.html">홈</a>
               </li>
               <li>
                 <i class="fa-regular fa-bell" id="nav-notice"></i>
-                <a href="#"> 공지사항</a>
+                <a href="Notice-page.html"> 공지사항</a>
               </li>
               <li>
                 <i class="fa-solid fa-globe" id="nav-all"></i>
-                <a href="#">전체글</a>
+                <a href="/html/All-board.html">전체글</a>
               </li>
               <li>
                 <i class="fa-solid fa-bookmark" id="nav-popular"></i>
-                <a href="#">인기글</a>
+                <a href="popular-board.html">인기글</a>
               </li>
               <li>
                 <i class="fa-regular fa-circle-question" id="nav-faq"></i>
-                <a href="#">FAQ</a>
+                <a href="/html/FAQ-page.html">FAQ</a>
               </li>
             </ul>
           </nav>
@@ -95,76 +113,28 @@
 
         <!-- 메인 콘텐츠 -->
         <section class="right-body">
-          <!-- 게시판 부분 -->
+          <form>
+            <h2>글 작성</h2>
+            <hr />
+            <br />
+            <input
+              type="text"
+              name="title"
+              id="title"
+              placeholder="제목을 입력해주세요"
+              size="120px"
+            />
+            <div id="summernote"></div>
 
-          <h2>전체글</h2>
-          <hr />
-          <div class="board-box">
-            <div class="board-content">
-              <table class="board-table">
-                <thead>
-                  <tr>
-                    <th>글번호</th>
-                    <th>제목</th>
-                    <th>작성자</th>
-                    <th>작성일</th>
-                    <th>조회수</th>
-                  </tr>
-                </thead>
-                <tbody class="post-list">
-                  <tr>
-                    <td>123</td>
-                    <td>여기 지금 사람 많은 이유 아시는분</td>
-                    <th>정윤쓰</th>
-                    <th>2023-01-15</th>
-                    <th>123</th>
-                  </tr>
-
-                  <tr>
-                    <td>124</td>
-                    <td>강남점 오늘 자바 스터디 같이 하실분</td>
-                    <th>수진쓰</th>
-                    <th>2023-01-05</th>
-                    <th>12</th>
-                  </tr>
-                  <tr>
-                    <td>125</td>
-                    <td>역삼역 스타벅스 나른하다</td>
-                    <th>민수스</th>
-                    <th>2023-01-05</th>
-                    <th>545</th>
-                  </tr>
-                  <tr>
-                    <td>126</td>
-                    <td>오늘 저녁은 미분당 강남점</td>
-                    <th>동준스</th>
-                    <th>2023-01-05</th>
-                    <th>656</th>
-                  </tr>
-                  <tr>
-                    <td>127</td>
-                    <td>빔 프로젝터 대여합니다.</td>
-                    <th>정훈스</th>
-                    <th>2023-01-05</th>
-                    <th>500</th>
-                  </tr>
-                  <tr>
-                    <td>128</td>
-                    <td>현대백화점 앞 옷추천</td>
-                    <th>민성스</th>
-                    <th>2023-01-05</th>
-                    <th>500</th>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="write"><button class="writeBtn">글작성</button></div>
-          </div>
+            <button type="button" id="reset">취소</button>
+            <button type="button" id="saveBtn">등록</button>
+          </form>
         </section>
       </section>
     </main>
 
     <!-- 푸터 -->
+
     <footer>
       <p>Copyright &copy; 2023. Villege Hall Community. All rights reserved</p>
 
@@ -178,5 +148,8 @@
         <a href="#">고객센터</a>
       </article>
     </footer>
+
+    <script src="/js/main-page.js"></script>
+    <script src="/js/write-page.js"></script>
   </body>
 </html>

@@ -11,6 +11,19 @@ main {
     width: 1140px;
     margin: auto;
 }
+
+.confirm{
+    color : green;
+    font-size: x-small;
+}
+
+.error{
+    color: red;
+    font-size: x-small;
+    
+
+}
+  
   
 /************************헤더 부분 시작**************************/
 header {
@@ -40,6 +53,7 @@ header > section:nth-child(1) {
 
 /****************************바디 부분 시작***********************************/
 
+
 .content-2{
 
     display: flex;
@@ -48,96 +62,94 @@ header > section:nth-child(1) {
 
 }
 
-.id-find-text {
+.pw-reset-text{
     display: flex;
     justify-content: center;
     padding-top: 30px;
 }
 
 
-#id-find-area{
+#pw-reset-area{
+    
     width: 500px; 
-    height: 300px;
+    height: 500px;
     display: flex;
     justify-content: center;
-    padding-top: 70px;
+    padding-left: 100px;
+    padding-top: 30px;
+    margin-bottom: 150px;
     border-radius: 20px;
     border: 1px solid gray;
+
     
 }
 
-/* 아이디 찾기 section*/
+.div1 {
+    
+    width:400px;
+    height: 30px;
+    color: black;
+    border-radius: 10px;
+    padding-bottom: 50px;
+    line-height: 30px;
+
+}
+
 
 .input-text{
     background-color: rgb(240, 244, 240);
-    border: 0;
+    border: solid 1px rgb(240, 244, 240);
     outline: 0;
-}
-
-#email-area {
-    background-color: rgb(240, 244, 240);
-    border: 0;
-    border-radius: 5px;
- 
-}
-
-#code-area {
-    background-color: rgb(240, 244, 240);
-    border: 0;
-    border-radius: 5px;
- 
-}
-
-/*이메일 입력창*/
-
-#email-text{
-    width: 190px;
-
-}
-
-.email-btn{
-
-    width: 75px;
-    background-color: #c4e0a4;
-    border: 0;
-    border-radius: 5px;
-    color:darkslategray;
-    cursor: pointer;
-}
-
-/*인증코드 입력창*/
-.code-btn{
-    width: 75px;
-    background-color: #c4e0a4;
-    border: 0;
-    border-radius: 5px;
-    color:darkslategray;
-    cursor: pointer;
-}
-
-/*아이디 찾기 버튼*/
-.id-find-article{
-
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
-    padding-bottom: 100px;
-}
-
-.id-find-btn{
-    width: 300px;
-    height: 45px;
-    font-size: large;
-    background-color: #55710f;
-    color: white;
-    border: 0;
+    width: 250px;
+    height: 30px;
     border-radius: 8px;
+}
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#email-check-btn{
+    
+    color: white; 
+    background-color:#55710f;
+    border:0;
+    border-radius: 2px;
     cursor: pointer;
-   
+}
+
+.div2{
+    
+    padding-top: 3px;
+    font-size: small;
+    color: gray;
+
+}
+
+.div3{
+
+  padding: 10px 10px;
+  background-color: rgb(240, 244, 240);
+  width: 355px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: xx-small;
+  display: none;
+}
+
+.div2:hover + .div3 {
+
+    display: block;
+  }
+
+#pw2 {
+    margin-top: 5px;
+}
+
+#pw-resetBtn{ 
+    margin-top: 10px;
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    color: gray;
+    border: none;
+    
 }
 
 

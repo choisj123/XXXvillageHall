@@ -2,8 +2,8 @@ const tabButtons = document.querySelectorAll(".category-article a");
 
 const tabContents = document.querySelectorAll(".FAQ-board");
 
-tabButtons.forEach(function(button) {
-  button.addEventListener("click", function() {
+tabButtons.forEach(function(a) {
+  button.addEventListener("mousedown", function() {
     // 탭 버튼 색상과 폰트 굵기 변경
     tabButtons.forEach(function(button) {
       button.classList.remove("active");
@@ -13,7 +13,8 @@ tabButtons.forEach(function(button) {
     this.classList.add("active");
     this.style.color = "white";
     this.style.fontWeight = "bold";
-
+  })
+});
 
 const targetContentId = this.getAttribute("data-tab");
 tabContents.forEach(function(content) {

@@ -61,6 +61,8 @@ function generatePageButtons(totalPages, currentPage) {
   document.getElementById('pagination').innerHTML = pageButtons;
 }
 
+
+
 // 총 게시글 갯수
 const content = document.getElementById("content");
 let totalContentCount = content.rows.length;
@@ -76,3 +78,5 @@ const maxPageButton = 5;
 
 // 현재페이지 (시작 = 1)
 let page = 1;
+
+generatePageButtons(totalPages, 1);

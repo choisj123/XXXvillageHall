@@ -116,13 +116,21 @@
           <form>
             <h2>글 작성</h2>
             <hr />
-            <br />
+            <label>태그 </label>
+            <select id="tag">
+              <option name="tag" value="issue" id="issue">이슈</option>
+              <option name="tag" value="delicious" id="delicious">맛집</option>
+              <option name="tag" value="hobby" id="hobby">취미</option>
+              <option name="tag" value="friend" id="friend">친목</option>
+              <option name="tag" value="recommend" id="recommend">추천</option>
+              <option name="tag" value="etc" id="etc" selected>기타</option>
+            </select>
             <input
               type="text"
               name="title"
               id="title"
               placeholder="제목을 입력해주세요"
-              size="120px"
+              size="125px"
             />
             <div id="summernote"></div>
 

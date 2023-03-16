@@ -67,16 +67,34 @@ document.getElementById("pw1").addEventListener("keyup",function(){
     const result1 = document.getElementById("result1");
 
     if(regEx1.test(this.value)){
-        result1.innerText = "비밀번호 사용가능합니다."
+        result1.innerText = "안전한 비밀번호 입니다."
 
         result1.classList.add("confirm");
         result1.classList.remove("error"); 
+        pw1.style.borderColor="rgb(240, 244, 240)";
 
     } else{
         result1.innerText = "8~16자 영문 대 소문자, 숫자, 특수문자를 입력하세요"
 
         result1.classList.add("error");
         result1.classList.remove("confirm"); 
+        pw1.style.borderColor="red";
+ 
+    }
+
+    if(pw1.value==pw2.value){
+
+        result2.innerText = "비밀번호가 일치합니다."
+
+        result2.classList.add("confirm");
+        result2.classList.remove("error"); 
+        pw2.style.borderColor="rgb(240, 244, 240)";    
+
+    } else{
+        result2.innerText = "비밀번호가 일치하지 않습니다."
+        result2.classList.add("error");
+        result2.classList.remove("confirm"); 
+        pw2.style.borderColor="red";
  
     }
 })
@@ -94,20 +112,22 @@ document.getElementById("pw1").addEventListener("keyup",function(){
 document.getElementById("pw2").addEventListener("keyup",function(){
 
     const result2 = document.getElementById("result2"); 
-    const  p1 = document.getElementById('pw1');
-    const  p2 = document.getElementById('pw2');
+    const  pw1 = document.getElementById('pw1');
+    const  pw2 = document.getElementById('pw2');
 
-    if(p1.value==p2.value){
+    if(pw1.value==pw2.value){
 
-        result2.innerText = "확인 완료"
+        result2.innerText = "비밀번호가 일치합니다."
 
         result2.classList.add("confirm");
         result2.classList.remove("error"); 
+        pw2.style.borderColor="rgb(240, 244, 240)";    
 
     } else{
         result2.innerText = "비밀번호가 일치하지 않습니다."
         result2.classList.add("error");
         result2.classList.remove("confirm"); 
+        pw2.style.borderColor="red";
  
     }
 

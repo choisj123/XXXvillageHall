@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>write-page</title>
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/write-page.css" />
+
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/2f1bf0eac7.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <!-- 클릭시 메인으로 이동하는 로고 -->
+        <section>
+          <a href="/html/main-page.html">
+            <img src="/src/logo.png" id="home-logo" />
+          </a>
+        </section>
+
+        <section>
+          <article class="search-area">
+            <!-- form 내부 input 태그 값을 서버 또는 페이지로 전달 -->
+            <form action="#" name="search-form">
+              <fieldset>
+                <input
+                  type="search"
+                  id="query"
+                  name="query"
+                  autocomplete="off"
+                  placeholder="검색어를 입력해주세요"
+                />
+
+                <!-- 검색버튼 -->
+                <button
+                  id="search-btn"
+                  class="fa-solid fa-magnifying-glass"
+                ></button>
+              </fieldset>
+            </form>
+          </article>
+        </section>
+
+        <!-- 로그인 / 회원가입 -->
+        <section class="login-signup-area">
+          <div>
+            <!-- 자물쇠 아이콘 -->
+            <a
+              href="/html/sign-in-page.html"
+              id="login"
+              class="fa-solid fa-lock"
+              >&nbsp;로그인</a
+            >
+          </div>
+
+          <a href="/html/sign-up-page.html" id="signup">회원가입</a>
+        </section>
+      </header>
+
+      <!-- 바디 부분 시작 -->
+      <section class="body">
+        <section class="left-body">
+          <article>
+            <!-- 이미지 + 로그인 -->
+
+            <img src="../src/profile.png" /><br />
+            <a href="/html/sign-in-page.html" id="body-login"> 로그인</a>
+          </article>
+          <!-- 네비 (메뉴바)-->
+          <nav>
+            <ul>
+              <li>
+                <i class="fa-solid fa-house" id="nav-home"></i>
+                <a href="/html/main-page.html">홈</a>
+              </li>
+              <li>
+                <i class="fa-regular fa-bell" id="nav-notice"></i>
+                <a href="Notice-page.html"> 공지사항</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-globe" id="nav-all"></i>
+                <a href="/html/All-board.html">전체글</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-bookmark" id="nav-popular"></i>
+                <a href="popular-board.html">인기글</a>
+              </li>
+              <li>
+                <i class="fa-regular fa-circle-question" id="nav-faq"></i>
+                <a href="/html/FAQ-page.html">FAQ</a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <!-- 메인 콘텐츠 -->
+        <section class="right-body">
+          <form>
+            <h2>글 작성</h2>
+            <hr />
+            <label>태그 </label>
+            <select id="tag">
+              <option name="tag" value="issue" id="issue">이슈</option>
+              <option name="tag" value="delicious" id="delicious">맛집</option>
+              <option name="tag" value="hobby" id="hobby">취미</option>
+              <option name="tag" value="friend" id="friend">친목</option>
+              <option name="tag" value="recommend" id="recommend">추천</option>
+              <option name="tag" value="etc" id="etc" selected>기타</option>
+            </select>
+            <input
+              type="text"
+              name="title"
+              id="title"
+              placeholder="제목을 입력해주세요"
+              size="125px"
+            />
+            <div id="summernote"></div>
+
+            <button type="button" id="reset">취소</button>
+            <button type="button" id="saveBtn">등록</button>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <!-- 푸터 -->
+
+    <footer>
+      <p>Copyright &copy; 2023. Villege Hall Community. All rights reserved</p>
+
+      <article>
+        <a href="#">프로젝트 소개</a>
+        <span>|</span>
+        <a href="#">이용약관</a>
+        <span>|</span>
+        <a href="#">개인정보처리방침</a>
+        <span>|</span>
+        <a href="#">고객센터</a>
+      </article>
+    </footer>
+
+    <script src="/js/main-page.js"></script>
+    <script src="/js/write-page.js"></script>
+  </body>
+</html>

@@ -1,8 +1,8 @@
-.right-body {
+/* .right-body {
   display: flex;
   flex-direction: column;
   padding: 20px 0px 10px 30px;
-}
+} */
 
 .right-body :nth-child(1) {
   flex-basis: 50%;
@@ -16,62 +16,59 @@
 
 /* ************ 지도 API SECTION 가급적 건들지 말아주세요 ㅠㅠㅠ ************* */
 
-.infowindow-contaioner{
+.infowindow-contaioner {
   border: 1px solid black;
-
 }
 
-.category{
+.category {
   margin-left: 20px;
 }
-.infowindow-header{
+.infowindow-header {
   display: flex;
   height: 60px;
 }
-.time{
+.time {
   text-align: end;
 }
 
-.inwi-left{
+.inwi-left {
   border: 1px solid black;
   flex-basis: 20%;
   width: 50px;
-  height:auto;
+  height: auto;
 }
-.inwi-right{
+.inwi-right {
   flex-basis: 80%;
   width: 50px;
   height: auto;
 }
 
-.infowindow-content{
+.infowindow-content {
   border: 1px solid black;
   height: 150px;
   width: 300px;
   background-color: #e4dddd;
 }
 
-.infowindow-footer{
+.infowindow-footer {
   border: 1px solid black;
   height: 50px;
   width: 300px;
 }
-.inwi-right > div:nth-of-type(1){
+.inwi-right > div:nth-of-type(1) {
   height: 30%;
   margin-left: 5px;
-  
-  
 }
-.inwi-right > div:nth-of-type(2){
+.inwi-right > div:nth-of-type(2) {
   height: 40%;
   margin-left: 5px;
 }
-.inwi-right > div:nth-of-type(3){
+.inwi-right > div:nth-of-type(3) {
   height: 30%;
   margin-left: 5px;
 }
 
-.option{
+.option {
   margin-left: 20px;
 }
 /* 커스텀 오버레이 스타일링 */

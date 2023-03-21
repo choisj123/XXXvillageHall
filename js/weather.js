@@ -1,36 +1,51 @@
-    /*
-    $.getJson('파일경로',function(data){
-        //data로 할일...
-    });
-    */
+     $.getJSON //api 키값
+    ('http://api.openweathermap.org/data/2.5/weather?id=1835848&appid=7401ee2987d021037ece4c98b2baf927&units=metric',function(data){
 
-    $.getJSON //api 키값
-    ('http://api.openweathermap.org/data/2.5/weather?id=1835848&appid=7401ee2987d021037ece4c98b2baf927&units=metric&lang=kr',function(data){
-        //data로 할일...
-        var $minTemp = data.main.temp_min;
-        var $cTemp = data.main.temp;
-        var $description = data.weather[0].description;
+        var $minTemp = Math.floor(data.main.temp_min) + "℃";
+        var $cTemp = Math.floor(data.main.temp) + "℃";
+        var $main = data.weather[0].main;
         var $humidity = data.main.humidity + '%';
         var $now = new Date($.now());
         var $cDate = $now.getMonth() + 1 + '월' + $now.getDate() + '일';
         //  + $now.getHours()+ '시간' + $now.getMinutes() + '분';
         var $wIcon = data.weather[0].icon;
-        //Date.now(); == $.now
 
-        //A.aooendTo(B) A요소의 내용의 뒤에 A를 추가
-        //A.aooend(B) A요소의 내용의 뒤에 B를 추가
-        //A.preoendTo(B) A요소의 내용의 앞에 A를 추가
-        //A.prepend(B) A요소의 내용의 앞에 B를 추가
+
+        var box = document.querySelector(".box");
+
+        var img = (window.getComputedStyle(document.querySelector(".box")).getPropertyValue("background-image"))
+     
+        const main = document.querySelector(".main");
+        
+        function getText($main) {
+            if($main === "Haze" || $main === "Clouds"){
+                box.style.backgroundImage = "url(/src/cloud.jpg)";
+                main.innerText = "흐림";
+            } else if($main === "Clear"){
+                box.style.backgroundImage = "url(/src/sunny.jpg)";
+                main.innerText ="맑음";
+            } else if($main === "Snow"){
+                box.style.backgroundImage = "url(/src/snow.jpg)";
+                main.innerText = "눈";
+            } else if($main === "Rain"){
+                box.style.backgroundImage = "url(/src/rain.jpg)";
+                main.innerText = "비";
+            } else {
+                main.innerText = '번개';
+            }
+        }
+
+
         $('.clowtemp').append($minTemp);
         $('h1').prepend($cDate);
-        $('.description').append($description);
+        $('.main').append(getText($main));
         $('.ctemp').append($cTemp);
         $('.humidity').append($humidity);
         $('.cicon').append(' <img src="http://openweathermap.org/img/wn/'+ $wIcon + '.png"/>');
          
-        //<img src=" http://openweathermap.org/img/wn/10d@2x.png"/>
+        
     });
-    $.getJSON
+    $.getJSON 
     ('http://api.openweathermap.org/data/2.5/air_pollution?lat=37.5683&lon=126.9778&appid=7401ee2987d021037ece4c98b2baf927&units=metric&lang=kr',function(data){
         var $aqi = data.list[0].main.aqi;
 
@@ -44,7 +59,11 @@
         } else if($aqi == 4){
         aqi.innerText = "나쁨";
         } else if($aqi == 5){
-        aqi.innerText = "안좋음";
+        aqi.innerText = "매우 나쁨";
         } 
     });
 
+
+
+   //단점이 먼지  jQuery 하고 자바스크립트랑 혼종이다. 문제점 var에 코드를 쓰고 호이스팅(동적이 난잡하다.)이 일어나고 있다. 
+   //해결코드 : 이 소스를 다 갈아 엎어야 된다. 
